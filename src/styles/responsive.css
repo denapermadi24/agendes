@@ -46,18 +46,58 @@
     display: block;
     text-align: left;
   }
+  .grid-container {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+@media (max-width: 320px) {
+  .con {
+    width: auto;
+  }
+}
+
+@media (max-width: 515px) {
+  /* Ubah ukuran padding saat lebar layar maksimum 480px */
+  .grid-container {
+    grid-template-columns: 2fr 2fr;
+  }
+  .grid-container div {
+    padding: 25px;
+  }
 }
 
 @media screen and (min-width: 800px) {
-  .hamburger {
-    display: none;
+  .sub_layanan {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
   }
   .footer-container {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 100px;
   }
+  .deskripsi_paragraf {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .hamburger {
+    display: none;
+  }
 }
+
+@media screen and (max-width: 1200px) {
+  .image_hero {
+    display: none;
+  }
+  .container {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 999px) {
+}
+
 @media screen and (max-width: 799px) {
   .hero_title,
   .hero_subtitle,
@@ -86,6 +126,14 @@
 }
 
 @media (max-width: 768px) {
+  .footer-content,
+  .social-media,
+  .footer-links,
+  .social-icon {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
   .header {
     padding-left: 7px;
     padding-right: 7px;
@@ -95,13 +143,11 @@
   .header li a {
     margin-left: 0;
   }
-  .footer-content,
-  .social-media,
-  .footer-links,
-  .social-icon {
-    flex-basis: 100%;
-    text-align: center;
-    margin-bottom: 20px;
+  .container {
+    padding-top: 80px;
+  }
+  .team_container {
+    grid-template-columns: 1fr;
   }
   .footer-container {
     padding: 5px;
@@ -109,6 +155,9 @@
   .deskripsi_footer,
   .copyright {
     width: 100%;
+  }
+  .deskripsi_container {
+    padding: 15px;
   }
 }
 
@@ -137,6 +186,6 @@
     background-color: white;
     top: 0;
     overflow: hidden;
-    box-shadow: 2px 1px 15px 0px rgba(0, 0,  0,  0.57);
+    box-shadow: 2px 1px 15px 0px rgba(0, 0, 0, 0.57);
   }
 }
