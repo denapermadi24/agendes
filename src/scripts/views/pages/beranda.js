@@ -92,9 +92,9 @@ const Beranda = {
         </div>
         <div class="deskripsi_layanan">
           <p>
-            Pengguna dapat dengan mudah menukar dan mengelola sampah mereka
-            melalui transaksi digital, tanpa repot datang ke tempat pengolahan
-            sampah secara mandiri.
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
           </p>
         </div>
       </div>
@@ -105,9 +105,9 @@ const Beranda = {
         </div>
         <div class="deskripsi_layanan">
           <p>
-            Layanan pick-up sampah yang disediakan memungkinkan pengguna untuk
-            mendapatkan sampah mereka dijemput langsung oleh tim Tracycle,
-            menghemat waktu dan tenaga.
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
           </p>
         </div>
       </div>
@@ -118,9 +118,9 @@ const Beranda = {
         </div>
         <div class="deskripsi_layanan">
           <p>
-            Masyarakat dapat lebih mudah dan terorganisir dalam membuang sampah
-            dengan benar, serta mendukung upaya daur ulang dan pengelolaan
-            sampah yang berkelanjutan.
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
           </p>
         </div>
       </div>
