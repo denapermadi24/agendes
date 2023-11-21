@@ -52,6 +52,30 @@
   .hamburger {
     display: none;
   }
+  .footer-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 799px) {
+  .hero_title,
+  .hero_subtitle,
+  .exchange_button {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .deskripsi_footer {
+    text-align: center;
+  }
+  .hero_title {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .con {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -70,6 +94,21 @@
   }
   .header li a {
     margin-left: 0;
+  }
+  .footer-content,
+  .social-media,
+  .footer-links,
+  .social-icon {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer-container {
+    padding: 5px;
+  }
+  .deskripsi_footer,
+  .copyright {
+    width: 100%;
   }
 }
 
