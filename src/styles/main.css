@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/** MAIN  */
+
+main {
+  width: 100%;
+  min-height: 90vh;
+  margin: 0 auto;
+}
+
+hr {
+  width: 200px;
+  height: 5px;
+  color: #395220;
+  text-align: center;
+  background-color: #395220;
+  border-radius: 3px;
+  margin: 5px auto;
+}
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #fbbc26;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 600px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.header__image {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 0px;
+  height: 60px;
+}
+
+.close__menu {
+  display: none;
+  border: 0;
+  background-color: transparent;
+  font-size: 24px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.close__menu {
+  font-size: 44px;
+}
+
+/** NAV  */
+
+.nav {
+  width: 100%;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 100px;
+  padding-right: 100px;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  overflow: hidden;
+  box-shadow: 2px 1px 15px 0px rgba(0, 0, 0, 0.57);
+}
+
+.nav__item {
+  color: #000000;
+  transition: ease 0.5s;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.nav__itemadmn {
+  color: #ffffff;
+  background-color: #2c79c6;
+  font-weight: bold;
+  transition: ease 0.5s;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.nav__item:hover,
+.nav__item:active,
+.nav__item.active {
+  color: white;
+  background-color: #395220;
+}
+
+.nav__item:active,
+.nav__item.active {
+  color: white;
+  background-color: #395220;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.12) inset;
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  margin-top: 6px;
+  float: right;
+}
+
+.nav__list li {
+  margin-left: 18px;
+}
+
+/** SKIP LINK */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #2c79c6;
+  color: whitesmoke;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.skip-link:focus  {
+    top: 0;
+}
