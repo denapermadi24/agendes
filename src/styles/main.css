@@ -400,25 +400,6 @@ hr {
   margin: auto;
 }
 
-.jenis_sampah_desc {
-  text-align: center;
-  margin-top: 15px;
-}
-.note_container {
-  background-color: #4c7031;
-  border-radius: 10px;
-  text-align: center;
-  color: #ffffff;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 50px;
-  max-width: 100%;
-  margin: 20px auto 40px auto;
-}
-.note {
-  padding: 20px;
-}
-
 /* footer */
 
 footer {
@@ -427,11 +408,20 @@ footer {
   background-color: #2c79c6;
   color: #fff;
   width: 100%;
+  overflow: hidden; /* Menambahkan overflow: hidden untuk mengatasi overflow content */
 }
 
 .footer-container {
   width: 100%;
   padding: 50px 100px 50px 100px;
+  overflow: hidden; /* Menambahkan overflow: hidden untuk mengatasi overflow content */
+}
+
+/* Membersihkan float */
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .logo_footer {
@@ -442,6 +432,7 @@ footer {
   list-style-type: none;
   background-color: #2c79c6;
 }
+
 .footer-links ul {
   list-style-type: none;
   background-color: #2c79c6;
