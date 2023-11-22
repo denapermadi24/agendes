@@ -408,7 +408,7 @@ footer {
   background-color: #2c79c6;
   color: #fff;
   width: 100%;
-  overflow: hidden; /* Menambahkan overflow: hidden untuk mengatasi overflow content */
+  overflow: hidden;
 }
 
 .footer-container {

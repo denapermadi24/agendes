@@ -13,7 +13,7 @@ const Beranda = {
     </p>
   </div>
   <a
-    class="exchange_button href="#/agenda"
+    class="exchange_button" href="#/agenda"
   >
     Cek Agenda
   </a>
