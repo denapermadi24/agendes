@@ -1,8 +1,8 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
-import App from './views/app';
-import swRegister from './utils/sw-register';
+import App from './views/app.js';
+import swRegister from './utils/sw-register.js';
 
 const $ = require('jquery');
 
@@ -18,17 +18,23 @@ $('.skip-link').on('click', (event) => {
 
 $('#menu').on('click', (event) => {
   event.stopPropagation();
-  drawer.classList.toggle('open');
+  if (drawer) {
+    drawer.classList.toggle('open');
+  }
 });
 
 $('.hero').on('click', (event) => {
   event.stopPropagation();
-  drawer.classList.remove('open');
+  if (drawer) {
+    drawer.classList.remove('open');
+  }
 });
 
 $('main').on('click', (event) => {
   event.stopPropagation();
-  drawer.classList.remove('open');
+  if (drawer) {
+    drawer.classList.remove('open');
+  }
 });
 
 window.addEventListener('hashchange', () => {
