@@ -17,3 +17,21 @@ exports.showAllAgenda = function(req, res){
         }
     });
 };
+
+//menampilkan agenda berdasarkan id
+exports.getAgendabById = function(req, res){
+    let id = req.params.id;
+    connection.query('SELECT * FROM kegiatan_desa WHERE id_kegiatan = ?', [id], function(error, rows, fields){
+        if(error){
+            console.log(error);
+        }else {
+            if (rows.length === 0) {
+                return res.status(404).json({
+                    status: 'fail',
+                    message: 'Agenda tidak ditemukan',
+                });
+            }
+            response.ok(rows,res);
+        }
+    });
+};

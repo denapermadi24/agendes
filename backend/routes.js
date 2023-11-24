@@ -8,4 +8,7 @@ module.exports = function(app){
     
     app.route('/agenda')
         .get(myjson.showAllAgenda);
+
+    app.route('/agenda/:id')
+        .get(myjson.getAgendabById);        
 }
