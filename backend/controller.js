@@ -70,3 +70,44 @@ exports.addNewAgenda = function(req, res){
     });
 };
 
+//mengubah data agenda berdasarkan id
+exports.updateAgendaById = function(req, res){
+    var id = req.params.id;
+    var nama_kegiatan = req.body.nama_kegiatan;
+    var deskripsi_kegiatan = req.body.deskripsi_kegiatan;
+    var tempat_kegiatan = req.body.tempat_kegiatan;
+    var jenis_kegiatan = req.body.jenis_kegiatan;
+    var waktu = req.body.waktu;
+    var tambahan = req.body.tambahan;
+    var foto_kegiatan = req.body.foto_kegiatan;
+
+    //Validasi apakah properti 'nama_kegiatan' , 'tempat_kegiatan' dan 'waktu' ada pada request body 
+    if (!nama_kegiatan || !tempat_kegiatan || !waktu) {
+        const failResponse = {
+            status: 'fail',
+            message: 'Gagal memperbarui agenda. Mohon isi nama, tempat, dan waktu kegiatan!',
+        };
+        return res.status(400).json(failResponse);
+    }
+
+    connection.query('UPDATE kegiatan_desa SET nama_kegiatan=?, deskripsi_kegiatan=?, tempat_kegiatan=?, jenis_kegiatan=?, waktu=?, tambahan=?, foto_kegiatan=? WHERE id_kegiatan=?', 
+    [nama_kegiatan, deskripsi_kegiatan, tempat_kegiatan, jenis_kegiatan, waktu, tambahan, foto_kegiatan, id], function(error, rows, fields){
+        if(error){
+            console.log(error);
+        }else {
+            if (rows.affectedRows === 0) {
+                const notFoundResponse = {
+                    status: 'fail',
+                    message: 'Gagal memperbarui agenda. Id tidak ditemukan',
+                };
+                return res.status(404).json(notFoundResponse);
+            }
+            const successResponse = {
+                status: 'success',
+                message: 'Agenda berhasil diubah',
+            };
+            return res.status(200).json(successResponse);
+        }
+    });
+};
+
