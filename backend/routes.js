@@ -10,5 +10,8 @@ module.exports = function(app){
         .get(myjson.showAllAgenda);
 
     app.route('/agenda/:id')
-        .get(myjson.getAgendabById);        
+        .get(myjson.getAgendabById);   
+    
+    app.route('/agenda')
+        .post(myjson.addNewAgenda);
 }
