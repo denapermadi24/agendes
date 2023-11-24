@@ -17,4 +17,7 @@ module.exports = function(app){
 
     app.route('/agenda/:id')
         .put(myjson.updateAgendaById);
+
+    app.route('/agenda/:id')
+        .delete(myjson.deleteAgendaById);
 }

@@ -111,3 +111,25 @@ exports.updateAgendaById = function(req, res){
     });
 };
 
+//menghapus agenda berdasarkan id
+exports.deleteAgendaById = function(req, res){
+    var id = req.params.id;
+    connection.query('DELETE FROM kegiatan_desa WHERE id_kegiatan=?', [id], function(error, rows, fields){
+        if(error){
+            console.log(error);
+        }else {
+            if (rows.affectedRows === 0) {
+                const notFoundResponse = {
+                    status: 'fail',
+                    message: 'Gagal menghapus agenda. Id tidak ditemukan',
+                };
+                return res.status(404).json(notFoundResponse);
+            }
+            const successResponse = {
+                status: 'success',
+                message: 'Agenda berhasil dihapus',
+            };
+            return res.status(200).json(successResponse);
+        }
+    });
+};
