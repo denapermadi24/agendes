@@ -480,4 +480,20 @@ footer {
 .deskripsi_footer {
   margin-top: 15px;
   width: 70%;
+  
 }
+
+/* Halaman Tentang*/
+.tentangkami{
+  border-bottom: 2px solid #f8f8f8; /* Ganti warna garis bawah sesuai keinginan Anda */
+  display: inline-block; /* Untuk memastikan lebar garis sesuai dengan teks */
+  padding-bottom: 5px;
+  color: #ffffff ; 
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+
+
