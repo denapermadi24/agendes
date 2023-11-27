@@ -4,21 +4,21 @@ const Beranda = {
   async renderPageContent() {
     return `
     <div class="container">
-  <div class="hero_title">
-    <h1>Cek Jadwalkan Kegiatan Desa Anda Dengan AgenDes</h1>
-  </div>
-  <div class="hero_subtitle">
-    <p> Jadikan setiap kegiatan desa lebih terkoordinasi dan terstruktur. 
-    Mari membangun desa anda dan wujudkan solidaritas bersama AgenDes. Yuk gunakan AgenDes sekarang!  
-    </p>
-  </div>
-  <a
-    class="exchange_button" href="#/agenda"
-  >
-    Cek Agenda
-  </a>
-  <img class="image_hero" src="hero_beranda.png" alt="Hero" />
-</div>
+      <div class="desc_hero">
+        <div class="hero_title">
+          <h1>Cek Jadwalkan Kegiatan Desa Anda Dengan AgenDes</h1>
+        </div>
+        <div class="hero_subtitle">
+          <p> Jadikan setiap kegiatan desa lebih terkoordinasi dan terstruktur.
+            Mari membangun desa anda dan wujudkan solidaritas bersama AgenDes. Yuk gunakan AgenDes sekarang!
+          </p>
+          <a class="exchange_button" href="#/agenda">
+            Cek Agenda
+          </a>
+        </div>
+      </div>
+      <img class="image_hero" src="hero_beranda.png" alt="Hero" />
+    </div>
 
 <div class="maincontent" id="maincontent" >
   <div class="deskripsi_container">
@@ -127,24 +127,24 @@ const Beranda = {
     </div>
   </div>
 
-  <div class="tukar_container container">
-    <div class="hero_title">
-      <h1>Ingin Melihat Kegiatan Sebelumnya?</h1>
+    <div class="maincontent" id="maincontent">
+      <div class="tukar_container container">
+        <div class="desc_hero">
+          <div class="hero_title">
+            <h1>Ingin Melihat Kegiatan Sebelumnya?</h1>
+          </div>
+          <div class="hero_subtitle">
+            Anda ingin melihat kegiatan sebelumnya? Tenang! kami menyediakan informasi histori
+            kegiatan desa yang sudah berlalu. Yuk! segera cek riwayat kegiatan sebagai arsip
+            atau evaluasi untuk masa depan!
+            <a class="exchange_button" href="#/riwayat-agenda">
+              Cek Riwayat
+            </a>
+          </div>
+        </div>
+        <img class="image_hero image_hero_cek_kegiatan" src="beranda_riwayat.png" alt="Hero" style="background-color: aquamarine;" />
+      </div>
     </div>
-    <div class="hero_subtitle">
-    Anda ingin melihat kegiatan sebelumnya? Tenang! kami menyediakan informasi histori 
-    kegiatan desa yang sudah berlalu. Yuk! segera cek riwayat kegiatan sebagai arsip 
-    atau evaluasi untuk masa depan!
-    </div>
-    <a
-      class="exchange_button"
-      href="#/riwayat-agenda"
-    >
-      Cek Riwayat
-    </a>
-    <img class="image_hero" src="beranda_riwayat.png" alt="Hero" />
-  </div>
-</div>
 
   `;
   },

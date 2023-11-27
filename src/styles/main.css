@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -39,6 +40,7 @@ hr {
   border-radius: 3px;
   margin: 5px auto;
 }
+
 /* header */
 
 .header {
@@ -130,24 +132,24 @@ hr {
   display: none;
 }
 
-.header .menu-btn:checked ~ .menu {
+.header .menu-btn:checked~.menu {
   max-height: 600px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.header .menu-btn:checked~.menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.header .menu-btn:checked~.menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.header .menu-btn:checked~.menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
@@ -247,8 +249,8 @@ hr {
   font-weight: bolder;
 }
 
-.skip-link:focus  {
-    top: 0;
+.skip-link:focus {
+  top: 0;
 }
 
 /** banner */
@@ -258,19 +260,20 @@ hr {
   background-size: cover;
   width: 100%;
   display: grid;
-  grid-template-columns: 660px auto;
-  grid-template-rows: auto auto 45px;
-  margin-bottom: 50px;
-  padding: 100px;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto 0 5px;
+  gap: 0 70px;
+  /* margin-bottom: 50px; */
+  padding: 80px;
 }
 
 .hero_title {
-  font-size: 25px;
+  font-size: 22px;
   line-height: 55px;
   color: #ffffff;
 }
 
-.hero_title > h1 {
+.hero_title>h1 {
   margin: 0;
 }
 
@@ -287,11 +290,13 @@ hr {
 }
 
 .exchange_button {
+  display: block;
   max-width: 175px;
+  margin-top: 30px;
   padding: 12px;
   font-size: 16px;
-  color: black;
-  background-color: #ebebeb;
+  color: #2C79C6;
+  background-color: #F8F8F8;
   border-radius: 5px;
   text-align: center;
   border-style: none;
@@ -306,15 +311,27 @@ hr {
 
 /* content */
 
-.image_hero {
+.image_hero,
+.image_hero_cek_kegiatan {
   grid-row-start: 1;
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 3;
   margin-left: auto;
-  height: 400px;
   display: block;
   /* Membuat gambar menjadi elemen blok */
+}
+
+.desc_hero {
+  margin: auto 0;
+}
+
+.image_hero {
+  height: 400px;
+}
+
+.image_hero_cek_kegiatan {
+  height: 250px;
 }
 
 .deskripsi_container {
@@ -372,6 +389,7 @@ hr {
   text-align: center;
   margin-bottom: 15px;
 }
+
 .deskripsi_paragraf p {
   text-align: center;
   width: 100%;
@@ -414,7 +432,8 @@ footer {
 .footer-container {
   width: 100%;
   padding: 50px 100px 50px 100px;
-  overflow: hidden; /* Menambahkan overflow: hidden untuk mengatasi overflow content */
+  overflow: hidden;
+  /* Menambahkan overflow: hidden untuk mengatasi overflow content */
 }
 
 /* Membersihkan float */
@@ -481,3 +500,5 @@ footer {
   margin-top: 15px;
   width: 70%;
 }
+
+/* Beranda Admin */
