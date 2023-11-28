@@ -20,4 +20,7 @@ module.exports = function(app){
 
     app.route('/agenda/:id')
         .delete(myjson.deleteAgendaById);
+
+    app.route('/reminder')
+        .post(myjson.addNewReminder);    
 }

@@ -133,3 +133,32 @@ exports.deleteAgendaById = function(req, res){
         }
     });
 };
+
+//menambahkan data reminder warga desa
+exports.addNewReminder = function(req, res){
+    var nama_user = req.body.nama_user;
+    var email_user = req.body.email_user;
+
+    //Validasi apakah properti 'nama' dan 'email' ada pada request body
+    if (!nama_user || !email_user) {
+        const response = {
+            status: 'fail',
+            message: 'Gagal mengaktifkan reminder. Mohon isi nama dan email Anda!',
+        };
+        res.status(400).json(response);
+        return;
+    }
+
+    connection.query('INSERT INTO reminder_warga_desa (nama_user,email_user) VALUES(?,?)', 
+    [nama_user, email_user], function(error, rows, fields){
+        if(error){
+            console.log(error);
+        }else {
+            const successResponse = {
+                status: 'success',
+                message: 'Terima Kasih! Data anda telah kami terima. Kegiatan ini telah ditambahkan ke daftar agenda Anda. Harap cek email Anda untuk melihat detail undangan kegiatan ini.',
+            };
+            res.status(201).json(successResponse);
+        }
+    });
+};
