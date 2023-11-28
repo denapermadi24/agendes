@@ -191,3 +191,39 @@ exports.getReminderById = function(req, res){
         }
     });
 };
+
+//mengubah data reminder berdasarkan id
+exports.updateReminderById = function(req, res){
+    var id = req.params.id;
+    var nama_user = req.body.nama_user;
+    var email_user = req.body.email_user;
+
+    // Validasi apakah properti 'nama_user' dan 'email_user' ada pada request body
+    if (!nama_user || !email_user) {
+        const failResponse = {
+            status: 'fail',
+            message: 'Gagal memperbarui reminder. Mohon isi username dan user email!',
+        };
+        return res.status(400).json(failResponse);
+    }
+
+    connection.query('UPDATE reminder_warga_desa SET nama_user=?, email_user=? WHERE id_reminder=?', 
+    [nama_user, email_user, id], function(error, rows, fields){
+        if(error){
+            console.log(error);
+        }else {
+            if (rows.affectedRows === 0) {
+                const notFoundResponse = {
+                    status: 'fail',
+                    message: 'Gagal memperbarui reminder. Id tidak ditemukan',
+                };
+                return res.status(404).json(notFoundResponse);
+            }
+            const successResponse = {
+                status: 'success',
+                message: 'Reminder berhasil diubah',
+            };
+            return res.status(200).json(successResponse);
+        }
+    });
+};
