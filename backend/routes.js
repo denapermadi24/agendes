@@ -32,4 +32,7 @@ module.exports = function(app){
 
     app.route('/reminder/:id')
         .put(myjson.updateReminderById);     
+
+    app.route('/reminder/:id')
+        .delete(myjson.deleteReminderById);  
 }

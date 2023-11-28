@@ -227,3 +227,26 @@ exports.updateReminderById = function(req, res){
         }
     });
 };
+
+//menghapus reminder berdasarkan id
+exports.deleteReminderById = function(req, res){
+    var id = req.params.id;
+    connection.query('DELETE FROM reminder_warga_desa WHERE id_reminder=?', [id], function(error, rows, fields){
+        if(error){
+            console.log(error);
+        }else {
+            if (rows.affectedRows === 0) {
+                const notFoundResponse = {
+                    status: 'fail',
+                    message: 'Gagal menghapus reminder. Id tidak ditemukan',
+                };
+                return res.status(404).json(notFoundResponse);
+            }
+            const successResponse = {
+                status: 'success',
+                message: 'Reminder berhasil dihapus',
+            };
+            return res.status(200).json(successResponse);
+        }
+    });
+};
