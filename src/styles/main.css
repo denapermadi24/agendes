@@ -267,7 +267,6 @@ hr {
   grid-template-columns: 3fr 1fr;
   grid-template-rows: auto 0 5px;
   gap: 0 70px;
-  /* margin-bottom: 50px; */
   padding: 80px;
 }
 
@@ -426,16 +425,20 @@ hr {
 
 footer {
   margin-top: 50px;
+  height: 380px;
   margin-bottom: 0;
   background-color: #2c79c6;
   color: #F8F8F8;
   width: 100%;
-  overflow: hidden;
+  padding: 100px;
 }
 
 .footer-container {
+  height: 210px;
+  display: grid;
+  grid-template-columns: 4fr 0.8fr 1fr;
   width: 100%;
-  padding: 50px 100px 50px 100px;
+  border-bottom: 2px solid #F8F8F8;
   overflow: hidden;
   /* Menambahkan overflow: hidden untuk mengatasi overflow content */
 }
@@ -449,6 +452,10 @@ footer {
 
 .logo_footer {
   height: 65px;
+}
+
+.footer-links h2 {
+  margin-bottom: 12px;
 }
 
 .footer-links li {
@@ -472,36 +479,21 @@ footer {
   transition: 0.5s;
 }
 
-.social-media,
-.footer-links {
-  margin-top: 25px;
-}
-
 .social-icon {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: #F8F8F8;
-  color: #453c3c;
-  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  margin: 10px 10px 0 0;
   text-align: center;
-  line-height: 40px;
-  margin-right: 10px;
-  margin-top: 15px;
-  transition: background-color 0.3s ease;
+  color: #F8F8F8;
 }
 
-.social-icon:hover {
-  background-color: #555;
-}
-
-.social-icon i {
-  font-size: 18px;
+.bi {
+  margin: 5px 0;
 }
 
 .copyright,
 .deskripsi_footer {
-  margin-top: 15px;
+  margin-top: 12px;
   width: 70%;
 
 }
@@ -516,7 +508,6 @@ footer {
   color: #F8F8F8;
   text-align: center;
   margin-bottom: 20px;
-  /* margin-top: 20px; */
 }
 
 /* Dashboard Admin */

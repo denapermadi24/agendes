@@ -20,7 +20,7 @@ const Tentang = {
         <img class="image_hero" src="beranda_riwayat.png" alt="Hero" />
       </div>
     
-    
+    <div class="main-content-container">
     <div class="maincontent" id="maincontent" >
       <div class="deskripsi_container">
         <div class="tentangkami">
@@ -37,7 +37,7 @@ const Tentang = {
           </p>
         </div>
       </div>
-      
+    </div>
     </div>
     `;
   },
