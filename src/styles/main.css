@@ -592,9 +592,11 @@ select {
 
 .team_container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center; /* Membuat container berada di tengah secara horizontal */
   gap: 20px;
   max-width: 100%;
+  margin: auto;
 }
 
 .team_avatar {

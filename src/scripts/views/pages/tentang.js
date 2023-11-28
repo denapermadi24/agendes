@@ -64,14 +64,13 @@ const Tentang = {
         </div>
       </div>
       <div class="nama_team">
-        <h2>NAMA</h2>
+        <h2>Jalalludin</h2>
       </div>
       <div class="nama_univ">
-        <h2>UNIV</h2>
+        <h2>Universitas Bumigora</h2>
       </div>
     </div>
 
-    <div class="team_container">
     <div class="team_card">
       <div class="team_avatar">
         <div class="team_image">
@@ -92,14 +91,13 @@ const Tentang = {
         </div>
       </div>
       <div class="nama_team">
-        <h2>NAMA</h2>
+        <h2>L. Ridho Taufikurahma</h2>
       </div>
       <div class="nama_univ">
-        <h2>UNIV</h2>
+        <h2>Universitas Bumigora</h2>
       </div>
     </div>
 
-    <div class="team_container">
     <div class="team_card">
       <div class="team_avatar">
         <div class="team_image">
@@ -120,14 +118,13 @@ const Tentang = {
         </div>
       </div>
       <div class="nama_team">
-        <h2>NAMA</h2>
+        <h2>Muhammad Febrian Haekal</h2>
       </div>
       <div class="nama_univ">
-        <h2>UNIV</h2>
+        <h2>Universitas Bumigora</h2>
       </div>
     </div>
 
-    <div class="team_container">
     <div class="team_card">
       <div class="team_avatar">
         <div class="team_image">
@@ -148,14 +145,13 @@ const Tentang = {
         </div>
       </div>
       <div class="nama_team">
-        <h2>NAMA</h2>
+        <h2>Ni Putu Amelia Devasya Putri</h2>
       </div>
       <div class="nama_univ">
-        <h2>UNIV</h2>
+        <h2>Institut Teknologi dan Bisnis STIKOM Bali</h2>
       </div>
     </div>
 
-    <div class="team_container">
     <div class="team_card">
       <div class="team_avatar">
         <div class="team_image">
@@ -176,14 +172,13 @@ const Tentang = {
         </div>
       </div>
       <div class="nama_team">
-        <h2>NAMA</h2>
+        <h2>Dena Indiarto Permadi</h2>
       </div>
       <div class="nama_univ">
-        <h2>UNIV</h2>
+        <h2>Universitas Mataram</h2>
       </div>
     </div>
-
-    
+    </div>
 
     `;
   },
