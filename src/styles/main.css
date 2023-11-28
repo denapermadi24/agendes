@@ -509,14 +509,24 @@ footer {
 /* Halaman Tentang*/
 .tentangkami {
   border-bottom: 2px solid #f8f8f8;
-  /* Ganti warna garis bawah sesuai keinginan Anda */
   display: inline-block;
-  /* Untuk memastikan lebar garis sesuai dengan teks */
   padding-bottom: 5px;
   color: #F8F8F8;
   text-align: center;
   margin-bottom: 20px;
   /* margin-top: 20px; */
+}
+
+.rectangle {
+  width: 60%; /* Sesuaikan lebar sesuai kebutuhan Anda */
+  height: 300px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+  background-color: #afb5b9; /* Sesuaikan warna sesuai keinginan Anda */
+  color: #fff; /* Sesuaikan warna teks sesuai keinginan Anda */
+  text-align: center;
+  line-height: 200px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+  margin: auto;
+  display: flex;
+  border-radius: 8px;
 }
 
 /* Dashboard Admin */
