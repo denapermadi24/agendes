@@ -77,6 +77,7 @@
   .grid-container div {
     padding: 25px;
   }
+
 }
 
 @media screen and (min-width: 800px) {
@@ -112,7 +113,23 @@
   }
 }
 
-@media screen and (max-width: 999px) {}
+@media screen and (max-width: 999px) {
+  .tukar_container {
+    height: 300px;
+    padding: 20px;
+  }
+
+  .desc_hero {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  .tukar_container {
+    height: 400px;
+    padding: 20px;
+  }
+}
 
 @media screen and (max-width: 799px) {
 
@@ -122,7 +139,14 @@
     width: 100%;
     text-align: center;
     margin: auto;
+  }
+
+  .exchange_button {
     margin-top: 20px;
+  }
+
+  .desc_hero {
+    margin-top: 50px;
   }
 
   .deskripsi_footer {
@@ -144,6 +168,10 @@
     max-width: 1200px;
     margin: auto;
   }
+
+  /* .tukar_container {
+    padding: 500px;
+  } */
 }
 
 @media (max-width: 768px) {
@@ -168,8 +196,16 @@
     margin-left: 0;
   }
 
-  .container {
+  .container-top {
     padding-top: 80px;
+  }
+
+  .tentangkami h2 {
+    font-size: 22px;
+  }
+
+  .deskripsi_container {
+    padding: 50px;
   }
 
   .team_container {
@@ -186,7 +222,7 @@
   }
 
   .deskripsi_container {
-    padding: 15px;
+    padding: 20px;
   }
 }
 

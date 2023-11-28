@@ -3,7 +3,7 @@
 const Tentang = {
   async renderPageContent() {
     return `
-      <div class="container">
+      <div class="container container-top">
         <div class="desc_hero">
           <div class="hero_title">
             <h1>Yuk Kenalan dengan AgenDes</h1>
@@ -11,11 +11,11 @@ const Tentang = {
           <div class="hero_subtitle">
             <p> Selamat datang di laman kami! Di sini, kami ingin berbagi dengan Anda mengenai visi misi kami, tentang kami sebagai tim, serta memberikan informasi tentang aplikasi yang kami hasilkan. Kami percaya bahwa dengan memahami lebih dalam mengenai nilai-nilai kami dan tujuan kami dalam menciptakan solusi yang bermanfaat, Anda akan semakin yakin dengan apa yang kami tawarkan.
             </p>
+            <a
+              class="exchange_button" href="#/agenda">
+              Cek Agenda
+            </a>
           </div>
-          <a
-            class="exchange_button" href="#/agenda">
-            Cek Agenda
-          </a>
         </div>
         <img class="image_hero" src="beranda_riwayat.png" alt="Hero" />
       </div>

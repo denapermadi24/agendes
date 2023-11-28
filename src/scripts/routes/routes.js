@@ -2,11 +2,11 @@
 //import RiwayatAgenda from '../views/pages/riwayat-agenda';
 import Tentang from '../views/pages/tentang';
 import Beranda from '../views/pages/beranda';
-// import DashboardAdmin from '../views/pages/dashboard-admin';
+import DashboardAdmin from '../views/pages/dashboard-agenda';
 
 const routes = {
   '/': Beranda,
-  // '/admin': DashboardAdmin,
+  '/admin': DashboardAdmin,
   // '/agenda-kegiatan': AgendaKegiatan,
   // '/riwayat-agenda': RiwayatAgenda,
   '/tentang': Tentang,

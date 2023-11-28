@@ -3,7 +3,7 @@
 const Beranda = {
   async renderPageContent() {
     return `
-    <div class="container">
+    <div class="container container-top">
       <div class="desc_hero">
         <div class="hero_title">
           <h1>Cek Jadwalkan Kegiatan Desa Anda Dengan AgenDes</h1>
@@ -131,7 +131,7 @@ const Beranda = {
       <div class="tukar_container container">
         <div class="desc_hero">
           <div class="hero_title">
-            <h1>Ingin Melihat Kegiatan Sebelumnya?</h1>
+            <h2>Ingin Melihat Kegiatan Sebelumnya?</h2>
           </div>
           <div class="hero_subtitle">
             Anda ingin melihat kegiatan sebelumnya? Tenang! kami menyediakan informasi histori
