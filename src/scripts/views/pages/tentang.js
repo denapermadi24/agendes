@@ -39,9 +39,152 @@ const Tentang = {
   </div>
 </div>
 
-<div class="rectangle">
+<div class="team">
+    <h1>Our Team</h1>
+    <hr style="background-color: black;" />
+  </div>
+  <div class="team_container">
+    <div class="team_card">
+      <div class="team_avatar">
+        <div class="team_image">
+          <img
+            class="icon_team"
+            src="test.png"
+            alt="Team Icon"
+          />
+        </div>
+        <div class="icon_medsos-avtr">
+          <a href="#" class="medsos"
+            ><i class="fa fa-instagram"></i></a
+          >
+          <a
+            href="#"
+            class="medsos"><i class="fa fa-linkedin"></i></a
+          >
+        </div>
+      </div>
+      <div class="nama_team">
+        <h2>NAMA</h2>
+      </div>
+      <div class="nama_univ">
+        <h2>UNIV</h2>
+      </div>
+    </div>
 
-</div>
+    <div class="team_container">
+    <div class="team_card">
+      <div class="team_avatar">
+        <div class="team_image">
+          <img
+            class="icon_team"
+            src="test.png"
+            alt="Team Icon"
+          />
+        </div>
+        <div class="icon_medsos-avtr">
+          <a href="#" class="medsos"
+            ><i class="fa fa-instagram"></i></a
+          >
+          <a
+            href="#"
+            class="medsos"><i class="fa fa-linkedin"></i></a
+          >
+        </div>
+      </div>
+      <div class="nama_team">
+        <h2>NAMA</h2>
+      </div>
+      <div class="nama_univ">
+        <h2>UNIV</h2>
+      </div>
+    </div>
+
+    <div class="team_container">
+    <div class="team_card">
+      <div class="team_avatar">
+        <div class="team_image">
+          <img
+            class="icon_team"
+            src="test.png"
+            alt="Team Icon"
+          />
+        </div>
+        <div class="icon_medsos-avtr">
+          <a href="#" class="medsos"
+            ><i class="fa fa-instagram"></i></a
+          >
+          <a
+            href="#"
+            class="medsos"><i class="fa fa-linkedin"></i></a
+          >
+        </div>
+      </div>
+      <div class="nama_team">
+        <h2>NAMA</h2>
+      </div>
+      <div class="nama_univ">
+        <h2>UNIV</h2>
+      </div>
+    </div>
+
+    <div class="team_container">
+    <div class="team_card">
+      <div class="team_avatar">
+        <div class="team_image">
+          <img
+            class="icon_team"
+            src="test.png"
+            alt="Team Icon"
+          />
+        </div>
+        <div class="icon_medsos-avtr">
+          <a href="#" class="medsos"
+            ><i class="fa fa-instagram"></i></a
+          >
+          <a
+            href="#"
+            class="medsos"><i class="fa fa-linkedin"></i></a
+          >
+        </div>
+      </div>
+      <div class="nama_team">
+        <h2>NAMA</h2>
+      </div>
+      <div class="nama_univ">
+        <h2>UNIV</h2>
+      </div>
+    </div>
+
+    <div class="team_container">
+    <div class="team_card">
+      <div class="team_avatar">
+        <div class="team_image">
+          <img
+            class="icon_team"
+            src="test.png"
+            alt="Team Icon"
+          />
+        </div>
+        <div class="icon_medsos-avtr">
+          <a href="#" class="medsos"
+            ><i class="fa fa-instagram"></i></a
+          >
+          <a
+            href="#"
+            class="medsos"><i class="fa fa-linkedin"></i></a
+          >
+        </div>
+      </div>
+      <div class="nama_team">
+        <h2>NAMA</h2>
+      </div>
+      <div class="nama_univ">
+        <h2>UNIV</h2>
+      </div>
+    </div>
+
+    
+
     `;
   },
 
