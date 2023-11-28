@@ -22,5 +22,8 @@ module.exports = function(app){
         .delete(myjson.deleteAgendaById);
 
     app.route('/reminder')
-        .post(myjson.addNewReminder);    
+        .post(myjson.addNewReminder);  
+        
+    app.route('/reminder')
+        .get(myjson.showAllReminder);  
 }
