@@ -173,3 +173,21 @@ exports.showAllReminder = function(req, res){
         }
     });
 };
+
+//menampilkan reminder berdasarkan id
+exports.getReminderById = function(req, res){
+    let id = req.params.id;
+    connection.query('SELECT * FROM reminder_warga_desa WHERE id_reminder = ?', [id], function(error, rows, fields){
+        if(error){
+            console.log(error);
+        }else {
+            if (rows.length === 0) {
+                return res.status(404).json({
+                    status: 'fail',
+                    message: 'Reminder tidak ditemukan',
+                });
+            }
+            response.ok(rows,res);
+        }
+    });
+};

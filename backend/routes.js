@@ -26,4 +26,7 @@ module.exports = function(app){
         
     app.route('/reminder')
         .get(myjson.showAllReminder);  
+
+    app.route('/reminder/:id')
+        .get(myjson.getReminderById);
 }
