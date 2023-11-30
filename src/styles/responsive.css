@@ -87,12 +87,6 @@
     gap: 25px;
   }
 
-  .footer-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 100px;
-  }
-
   .deskripsi_paragraf {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -111,6 +105,18 @@
   .container {
     grid-template-columns: auto;
   }
+
+  .main-content-container {
+    padding: 40px;
+  }
+
+  footer {
+    margin: 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 2fr 0.8fr 1fr;
+  }
 }
 
 @media screen and (max-width: 999px) {
@@ -121,6 +127,18 @@
 
   .desc_hero {
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  footer {
+    padding: 70px;
+    height: 400px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1.5fr 0.8fr 1fr;
+    height: 250px;
   }
 }
 
@@ -168,10 +186,6 @@
     max-width: 1200px;
     margin: auto;
   }
-
-  /* .tukar_container {
-    padding: 500px;
-  } */
 }
 
 @media (max-width: 768px) {
@@ -212,10 +226,6 @@
     grid-template-columns: 1fr;
   }
 
-  .footer-container {
-    padding: 5px;
-  }
-
   .deskripsi_footer,
   .copyright {
     width: 100%;
@@ -223,6 +233,27 @@
 
   .deskripsi_container {
     padding: 20px;
+  }
+
+  footer {
+    height: 100%;
+    padding: 40px;
+  }
+
+  .identitas_footer {
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px 0;
+    padding: 5px;
+    min-height: 550px;
+  }
+
+  .social-media {
+    font-size: 16px;
   }
 }
 

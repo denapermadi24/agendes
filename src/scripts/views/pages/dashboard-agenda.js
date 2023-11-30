@@ -20,6 +20,7 @@ const DashboardAdmin = {
       <img class="image_hero" src="hero_beranda.png" alt="Hero" />
     </div>
 
+    <div class="main-content-container">
     <div class="container-post-kegiatan">
       <div class="post-kegiatan">
         <div class="form-post-kegiatan">
@@ -92,6 +93,7 @@ const DashboardAdmin = {
         <img class="image_hero image_hero_cek_kegiatan" src="beranda_riwayat.png" alt="Hero"
           style="background-color: aquamarine;" />
       </div>
+    </div>
     </div>
   `;
   },
