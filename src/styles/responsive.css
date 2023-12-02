@@ -254,7 +254,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 975px) {
   .header li {
     float: left;
   }
@@ -277,8 +277,8 @@
     width: 100%;
     padding-top: 9px;
     padding-bottom: 9px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
     position: sticky;
     background-color: white;
     top: 0;
