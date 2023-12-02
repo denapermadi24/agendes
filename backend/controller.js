@@ -2,50 +2,50 @@
 
 var response = require('./respon');
 var connection = require('./koneksi');
+const fs = require('fs');
 
-exports.index = function(req, res){
+exports.index = function (req, res) {
     response.ok("Aplikasi REST API berjalan!", res);
 }
 
 //menampilkan semua agenda
-exports.showAllAgenda = function(req, res){
-    connection.query('SELECT * FROM kegiatan_desa', function(error, rows, fields){
-        if(error){
+exports.showAllAgenda = function (req, res) {
+    connection.query('SELECT * FROM kegiatan_desa', function (error, rows, fields) {
+        if (error) {
             console.log(error);
-        }else {
-            response.ok(rows,res);
+        } else {
+            response.ok(rows, res);
         }
     });
 };
 
 //menampilkan agenda berdasarkan id
-exports.getAgendabById = function(req, res){
+exports.getAgendabById = function (req, res) {
     let id = req.params.id;
-    connection.query('SELECT * FROM kegiatan_desa WHERE id_kegiatan = ?', [id], function(error, rows, fields){
-        if(error){
+    connection.query('SELECT * FROM kegiatan_desa WHERE id_kegiatan = ?', [id], function (error, rows, fields) {
+        if (error) {
             console.log(error);
-        }else {
+        } else {
             if (rows.length === 0) {
                 return res.status(404).json({
                     status: 'fail',
                     message: 'Agenda tidak ditemukan',
                 });
             }
-            response.ok(rows,res);
+            response.ok(rows, res);
         }
     });
 };
 
 //menambahkan data Agenda
-exports.addNewAgenda = function(req, res){
+exports.addNewAgenda = function (req, res) {
     var nama_kegiatan = req.body.nama_kegiatan;
     var deskripsi_kegiatan = req.body.deskripsi_kegiatan;
     var tempat_kegiatan = req.body.tempat_kegiatan;
     var jenis_kegiatan = req.body.jenis_kegiatan;
     var waktu = req.body.waktu;
     var tambahan = req.body.tambahan;
-    var foto_kegiatan = req.body.foto_kegiatan;
-
+    
     //Validasi apakah properti 'nama_kegiatan' , 'tempat_kegiatan' dan 'waktu' ada pada request body
     if (!nama_kegiatan || !tempat_kegiatan || !waktu) {
         const response = {
@@ -56,22 +56,24 @@ exports.addNewAgenda = function(req, res){
         return;
     }
 
-    connection.query('INSERT INTO kegiatan_desa (nama_kegiatan,deskripsi_kegiatan,tempat_kegiatan,jenis_kegiatan,waktu,tambahan,foto_kegiatan) VALUES(?,?,?,?,?,?,?)', 
-    [nama_kegiatan, deskripsi_kegiatan, tempat_kegiatan, jenis_kegiatan, waktu, tambahan, foto_kegiatan], function(error, rows, fields){
-        if(error){
-            console.log(error);
-        }else {
-            const successResponse = {
-                status: 'success',
-                message: 'Agenda berhasil ditambahkan',
-            };
-            res.status(201).json(successResponse);
-        }
-    });
+    var foto_kegiatan = req.file ? '/uploads/' + req.file.filename : null;
+    
+    connection.query('INSERT INTO kegiatan_desa (nama_kegiatan,deskripsi_kegiatan,tempat_kegiatan,jenis_kegiatan,waktu,tambahan,foto_kegiatan) VALUES(?,?,?,?,?,?,?)',
+        [nama_kegiatan, deskripsi_kegiatan, tempat_kegiatan, jenis_kegiatan, waktu, tambahan, foto_kegiatan], function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                const successResponse = {
+                    status: 'success',
+                    message: 'Agenda berhasil ditambahkan',
+                };
+                res.status(201).json(successResponse);
+            }
+        });
 };
 
 //mengubah data agenda berdasarkan id
-exports.updateAgendaById = function(req, res){
+exports.updateAgendaById = function (req, res) {
     var id = req.params.id;
     var nama_kegiatan = req.body.nama_kegiatan;
     var deskripsi_kegiatan = req.body.deskripsi_kegiatan;
@@ -79,8 +81,7 @@ exports.updateAgendaById = function(req, res){
     var jenis_kegiatan = req.body.jenis_kegiatan;
     var waktu = req.body.waktu;
     var tambahan = req.body.tambahan;
-    var foto_kegiatan = req.body.foto_kegiatan;
-
+    
     //Validasi apakah properti 'nama_kegiatan' , 'tempat_kegiatan' dan 'waktu' ada pada request body 
     if (!nama_kegiatan || !tempat_kegiatan || !waktu) {
         const failResponse = {
@@ -89,35 +90,52 @@ exports.updateAgendaById = function(req, res){
         };
         return res.status(400).json(failResponse);
     }
-
-    connection.query('UPDATE kegiatan_desa SET nama_kegiatan=?, deskripsi_kegiatan=?, tempat_kegiatan=?, jenis_kegiatan=?, waktu=?, tambahan=?, foto_kegiatan=? WHERE id_kegiatan=?', 
-    [nama_kegiatan, deskripsi_kegiatan, tempat_kegiatan, jenis_kegiatan, waktu, tambahan, foto_kegiatan, id], function(error, rows, fields){
-        if(error){
+    
+    var foto_kegiatan = req.file ? '/uploads/' + req.file.filename : null;
+    
+    // Menghapus foto lama jika ada
+    connection.query('SELECT foto_kegiatan FROM kegiatan_desa WHERE id_kegiatan = ?', [id], function (error, rows, fields) {
+        if (error) {
             console.log(error);
-        }else {
-            if (rows.affectedRows === 0) {
-                const notFoundResponse = {
-                    status: 'fail',
-                    message: 'Gagal memperbarui agenda. Id tidak ditemukan',
-                };
-                return res.status(404).json(notFoundResponse);
+        } else {
+            const oldFotoPath = rows[0] ? rows[0].foto_kegiatan : null;
+            if (oldFotoPath) {
+                fs.unlinkSync('.' + oldFotoPath);
             }
-            const successResponse = {
-                status: 'success',
-                message: 'Agenda berhasil diubah',
-            };
-            return res.status(200).json(successResponse);
+
+            connection.query(
+                'UPDATE kegiatan_desa SET nama_kegiatan=?, deskripsi_kegiatan=?, tempat_kegiatan=?, jenis_kegiatan=?, waktu=?, tambahan=?, foto_kegiatan=? WHERE id_kegiatan=?',
+                [nama_kegiatan, deskripsi_kegiatan, tempat_kegiatan, jenis_kegiatan, waktu, tambahan, foto_kegiatan, id],
+                function (error, rows, fields) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        if (rows.affectedRows === 0) {
+                            const notFoundResponse = {
+                                status: 'fail',
+                                message: 'Gagal memperbarui agenda. Id tidak ditemukan',
+                            };
+                            return res.status(404).json(notFoundResponse);
+                        }
+                        const successResponse = {
+                            status: 'success',
+                            message: 'Agenda berhasil diubah',
+                        };
+                        return res.status(200).json(successResponse);
+                    }
+                }
+            );
         }
     });
 };
 
 //menghapus agenda berdasarkan id
-exports.deleteAgendaById = function(req, res){
+exports.deleteAgendaById = function (req, res) {
     var id = req.params.id;
-    connection.query('DELETE FROM kegiatan_desa WHERE id_kegiatan=?', [id], function(error, rows, fields){
-        if(error){
+    connection.query('DELETE FROM kegiatan_desa WHERE id_kegiatan=?', [id], function (error, rows, fields) {
+        if (error) {
             console.log(error);
-        }else {
+        } else {
             if (rows.affectedRows === 0) {
                 const notFoundResponse = {
                     status: 'fail',
@@ -135,7 +153,7 @@ exports.deleteAgendaById = function(req, res){
 };
 
 //menambahkan data reminder warga desa
-exports.addNewReminder = function(req, res){
+exports.addNewReminder = function (req, res) {
     var nama_user = req.body.nama_user;
     var email_user = req.body.email_user;
 
@@ -149,51 +167,51 @@ exports.addNewReminder = function(req, res){
         return;
     }
 
-    connection.query('INSERT INTO reminder_warga_desa (nama_user,email_user) VALUES(?,?)', 
-    [nama_user, email_user], function(error, rows, fields){
-        if(error){
-            console.log(error);
-        }else {
-            const successResponse = {
-                status: 'success',
-                message: 'Terima Kasih! Data anda telah kami terima. Kegiatan ini telah ditambahkan ke daftar agenda Anda. Harap cek email Anda untuk melihat detail undangan kegiatan ini.',
-            };
-            res.status(201).json(successResponse);
-        }
-    });
+    connection.query('INSERT INTO reminder_warga_desa (nama_user,email_user) VALUES(?,?)',
+        [nama_user, email_user], function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                const successResponse = {
+                    status: 'success',
+                    message: 'Terima Kasih! Data anda telah kami terima. Kegiatan ini telah ditambahkan ke daftar agenda Anda. Harap cek email Anda untuk melihat detail undangan kegiatan ini.',
+                };
+                res.status(201).json(successResponse);
+            }
+        });
 };
 
 //menampilkan semua reminder
-exports.showAllReminder = function(req, res){
-    connection.query('SELECT * FROM reminder_warga_desa', function(error, rows, fields){
-        if(error){
+exports.showAllReminder = function (req, res) {
+    connection.query('SELECT * FROM reminder_warga_desa', function (error, rows, fields) {
+        if (error) {
             console.log(error);
-        }else {
-            response.ok(rows,res);
+        } else {
+            response.ok(rows, res);
         }
     });
 };
 
 //menampilkan reminder berdasarkan id
-exports.getReminderById = function(req, res){
+exports.getReminderById = function (req, res) {
     let id = req.params.id;
-    connection.query('SELECT * FROM reminder_warga_desa WHERE id_reminder = ?', [id], function(error, rows, fields){
-        if(error){
+    connection.query('SELECT * FROM reminder_warga_desa WHERE id_reminder = ?', [id], function (error, rows, fields) {
+        if (error) {
             console.log(error);
-        }else {
+        } else {
             if (rows.length === 0) {
                 return res.status(404).json({
                     status: 'fail',
                     message: 'Reminder tidak ditemukan',
                 });
             }
-            response.ok(rows,res);
+            response.ok(rows, res);
         }
     });
 };
 
 //mengubah data reminder berdasarkan id
-exports.updateReminderById = function(req, res){
+exports.updateReminderById = function (req, res) {
     var id = req.params.id;
     var nama_user = req.body.nama_user;
     var email_user = req.body.email_user;
@@ -207,34 +225,34 @@ exports.updateReminderById = function(req, res){
         return res.status(400).json(failResponse);
     }
 
-    connection.query('UPDATE reminder_warga_desa SET nama_user=?, email_user=? WHERE id_reminder=?', 
-    [nama_user, email_user, id], function(error, rows, fields){
-        if(error){
-            console.log(error);
-        }else {
-            if (rows.affectedRows === 0) {
-                const notFoundResponse = {
-                    status: 'fail',
-                    message: 'Gagal memperbarui reminder. Id tidak ditemukan',
+    connection.query('UPDATE reminder_warga_desa SET nama_user=?, email_user=? WHERE id_reminder=?',
+        [nama_user, email_user, id], function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                if (rows.affectedRows === 0) {
+                    const notFoundResponse = {
+                        status: 'fail',
+                        message: 'Gagal memperbarui reminder. Id tidak ditemukan',
+                    };
+                    return res.status(404).json(notFoundResponse);
+                }
+                const successResponse = {
+                    status: 'success',
+                    message: 'Reminder berhasil diubah',
                 };
-                return res.status(404).json(notFoundResponse);
+                return res.status(200).json(successResponse);
             }
-            const successResponse = {
-                status: 'success',
-                message: 'Reminder berhasil diubah',
-            };
-            return res.status(200).json(successResponse);
-        }
-    });
+        });
 };
 
 //menghapus reminder berdasarkan id
-exports.deleteReminderById = function(req, res){
+exports.deleteReminderById = function (req, res) {
     var id = req.params.id;
-    connection.query('DELETE FROM reminder_warga_desa WHERE id_reminder=?', [id], function(error, rows, fields){
-        if(error){
+    connection.query('DELETE FROM reminder_warga_desa WHERE id_reminder=?', [id], function (error, rows, fields) {
+        if (error) {
             console.log(error);
-        }else {
+        } else {
             if (rows.affectedRows === 0) {
                 const notFoundResponse = {
                     status: 'fail',
