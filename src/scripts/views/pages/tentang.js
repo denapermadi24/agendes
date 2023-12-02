@@ -3,7 +3,7 @@
 const Tentang = {
   async renderPageContent() {
     return `
-    <div class="container container-top">
+    <div class="container container-top shadow">
       <div class="desc_hero">
         <div class="hero_title">
           <h1>Yuk Kenalan dengan AgenDes</h1>
@@ -24,7 +24,7 @@ const Tentang = {
 
     <div class="main-content-container">
       <div class="maincontent" id="maincontent">
-        <div class="deskripsi_container">
+        <div class="deskripsi_container shadow">
           <div class="tentangkami">
             <h1 class="teks-tentangkami">Tentang Kami</h1>
           </div>

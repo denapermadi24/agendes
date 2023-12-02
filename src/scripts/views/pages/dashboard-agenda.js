@@ -47,8 +47,12 @@ const DashboardAdmin = {
                 </select>
               </div>
               <div class="input">
+                <label for="tanggal">Tanggal Kegiatan</label>
+                <input id="tanggal" type="date" required>
+              </div>
+              <div class="input">
                 <label for="waktu">Waktu Kegiatan</label>
-                <input id="waktu" type="datetime-local" required>
+                <input id="waktu" type="time" required>
               </div>
               <div class="input">
                 <label for="tambahan">Tambahan</label>

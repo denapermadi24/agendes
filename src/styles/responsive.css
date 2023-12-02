@@ -78,6 +78,7 @@
     padding: 25px;
   }
 
+
 }
 
 @media screen and (min-width: 800px) {
@@ -142,7 +143,7 @@
   }
 }
 
-@media screen and (max-width: 421px) {
+@media screen and (max-width: 500px) {
   .tukar_container {
     height: 400px;
     padding: 20px;
