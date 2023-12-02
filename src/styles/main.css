@@ -581,19 +581,23 @@ select {
   font-weight: bold;
 }
 
+.main-content-container {
+  padding: 30px;
+}
+
 .team {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .team_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 15rem;
+  max-width: 60rem;
   justify-content: center;
-  /* Membuat container berada di tengah secara horizontal */
-  gap: 20px;
-  max-width: 100%;
-  margin: auto;
+  gap: 3rem;
 }
 
 .team_avatar {
@@ -603,12 +607,6 @@ select {
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-}
-
-.team_card {
-  align-content: center;
-  width: 100%;
-  display: block;
 }
 
 .icon_team {

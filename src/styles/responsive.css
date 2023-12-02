@@ -223,10 +223,6 @@
     padding: 50px;
   }
 
-  .team_container {
-    grid-template-columns: 1fr;
-  }
-
   .deskripsi_footer,
   .copyright {
     width: 100%;

@@ -26,7 +26,7 @@ const Tentang = {
       <div class="maincontent" id="maincontent">
         <div class="deskripsi_container shadow">
           <div class="tentangkami">
-            <h1 class="teks-tentangkami">Tentang Kami</h1>
+            <h2 class="teks-tentangkami">Tentang Kami</h2>
           </div>
           <div class="deskripsi_paragraf">
             <p>
@@ -42,8 +42,8 @@ const Tentang = {
       </div>
 
       <div class="team">
-        <h1>Our Team</h1>
-        <hr style="background-color: black;" />
+      <h2 class="our-team">Our Team</h2>
+      <hr style="background-color: black;"/>
       </div>
       <div class="team_container">
         <div class="team_card">
