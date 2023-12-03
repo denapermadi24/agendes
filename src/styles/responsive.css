@@ -78,7 +78,22 @@
     padding: 25px;
   }
 
+  .container-riwayat-agenda {
+    padding: 40px 20px 20px;
+  }
 
+  .search-input {
+    font-size: 0.8rem;
+    width: 150px;
+    height: 44px;
+    padding: 10px;
+  }
+
+  .btn-search {
+    right: 4.5px;
+    height: 44px;
+    width: 70px;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -99,11 +114,14 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .image_hero {
+
+  .image_hero,
+  .img-riwayat-kegiatan {
     display: none;
   }
 
-  .container {
+  .container,
+  .container-riwayat-agenda {
     grid-template-columns: auto;
   }
 

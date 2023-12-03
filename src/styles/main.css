@@ -259,15 +259,24 @@ hr {
 
 /** banner */
 
-.container {
+.container,
+.container-riwayat-agenda {
   background-color: #2c79c6;
   background-size: cover;
   width: 100%;
   display: grid;
+  padding: 80px;
+}
+
+.container {
   grid-template-columns: 3fr 1fr;
   grid-template-rows: auto 0 5px;
   gap: 0 70px;
-  padding: 80px;
+}
+
+.container-riwayat-agenda {
+  grid-template-columns: 1fr 3fr;
+  gap: 0 60px;
 }
 
 .hero_title {
@@ -312,6 +321,33 @@ hr {
   color: #f8f8f8;
 }
 
+.search-input {
+  margin-top: 25px;
+  width: 270px;
+  height: 44px;
+  padding: 20px;
+  margin-right: 0;
+  border-style: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-search {
+  position: relative;
+  font-weight: 300;
+  cursor: pointer;
+  color: #2c79c6;
+  background-color: #fbbc26;
+  right: 4.5px;
+  height: 44px;
+  width: 70px;
+  border-style: none;
+  border-radius: 0 10px 10px 0;
+}
+
+.btn-search:active {
+  transform: scale(0.97);
+}
+
 /* content */
 
 .image_hero,
@@ -323,6 +359,10 @@ hr {
   margin-left: auto;
   display: block;
   /* Membuat gambar menjadi elemen blok */
+}
+
+.img-riwayat-kegiatan {
+  object-fit: cover;
 }
 
 .desc_hero {
