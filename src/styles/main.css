@@ -50,9 +50,10 @@ hr {
 .header {
   background-color: #f8f8f8;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 999;
 }
 
 .header ul {
@@ -265,7 +266,8 @@ hr {
   background-size: cover;
   width: 100%;
   display: grid;
-  padding: 80px;
+  margin-top: 15px;
+  padding: 50px;
 }
 
 .container {
@@ -461,10 +463,62 @@ hr {
   margin: auto;
 }
 
+.item-riwayat-kegiatan {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  background-color: #D9D9D9;
+}
+
+.list-img-riwayat-kegiatan {
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+}
+
+.item-riwayat-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.riwayat-kegiatan>h2 {
+  text-align: center;
+  color: #2c79c6;
+}
+
+.riwayat-kegiatan {
+  padding: 20px;
+}
+
+.riwayat-kegiatan>hr {
+  background-color: #2c79c6;
+  margin-bottom: 40px;
+}
+
+.item-riwayat-article>a>h3 {
+  color: #2c79c6;
+}
+
+.waktu-kegiatan {
+  display: flex;
+  gap: 80px;
+  color: #555555;
+}
+
+.icon-waktu-kegiatan {
+  margin-right: 6px;
+}
+
 /* footer */
 
 footer {
-  margin-top: 50px;
+  margin-top: 15px;
   height: 380px;
   margin-bottom: 0;
   background-color: #2c79c6;

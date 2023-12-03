@@ -78,8 +78,9 @@
     padding: 25px;
   }
 
-  .container-riwayat-agenda {
-    padding: 40px 20px 20px;
+  .container-riwayat-agenda,
+  .container {
+    padding: 30px;
   }
 
   .search-input {
@@ -229,10 +230,6 @@
     margin-left: 0;
   }
 
-  .container-top {
-    padding-top: 80px;
-  }
-
   .tentangkami h2 {
     font-size: 22px;
   }
@@ -302,5 +299,39 @@
     top: 0;
     overflow: hidden;
     box-shadow: 2px 1px 15px 0px rgba(0, 0, 0, 0.57);
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .list-riwayat-kegiatan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 25px;
+  }
+
+  .item-riwayat-kegiatan {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    gap: 0;
+  }
+
+  .list-img-riwayat-kegiatan {
+    height: 250px;
+    width: 100%;
+  }
+
+  .item-riwayat-article {
+    justify-content: start;
+  }
+
+  .waktu-kegiatan {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .list-riwayat-kegiatan {
+    grid-template-columns: 1fr;
   }
 }
