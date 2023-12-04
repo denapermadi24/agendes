@@ -20,7 +20,7 @@ const RiwayatAgenda = {
   </div>
 
   <div class="main-content-container">
-    <section class="riwayat-kegiatan">
+    <section class="riwayat-agenda-kegiatan">
       <h2>Riwayat Kegiatan</h2>
       <hr>
       <section class="list-riwayat-kegiatan">

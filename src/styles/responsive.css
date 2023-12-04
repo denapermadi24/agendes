@@ -199,6 +199,10 @@
   .con {
     width: auto;
   }
+
+  .layanan {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -303,6 +307,8 @@
 }
 
 @media screen and (max-width: 1080px) {
+  /* Riwayat Agenda */
+
   .list-riwayat-kegiatan {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -328,10 +334,31 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  /* Agenda */
+
+  .list-agenda-kegiatan {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .list-riwayat-kegiatan {
     grid-template-columns: 1fr;
+  }
+
+  .list-agenda-kegiatan {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 2100px) {
+  .list-img-riwayat-kegiatan {
+    height: 200px;
+    width: 100%;
+  }
+
+  .list-agenda-kegiatan {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

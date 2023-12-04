@@ -19,7 +19,7 @@ const Tentang = {
           </a>
         </div>
       </div>
-      <img class="image_hero" src="beranda_riwayat.png" alt="Hero" />
+      <img class="image_hero" src="./cek-riwayat.png" alt="Hero"/>
     </div>
 
     <div class="main-content-container">

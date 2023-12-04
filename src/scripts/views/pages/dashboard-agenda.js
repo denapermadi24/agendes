@@ -17,7 +17,7 @@ const DashboardAdmin = {
           </a>
         </div>
       </div>
-      <img class="image_hero" src="hero_beranda.png" alt="Hero" />
+      <img class="image_hero" src="./hero-beranda.png" alt="Hero" />
     </div>
 
     <div class="main-content-container">
@@ -94,8 +94,7 @@ const DashboardAdmin = {
             </a>
           </div>
         </div>
-        <img class="image_hero image_hero_cek_kegiatan" src="beranda_riwayat.png" alt="Hero"
-          style="background-color: aquamarine;" />
+        <img class="image_hero image_hero_cek_kegiatan" src="./cek-riwayat.png" alt="Hero"/>
       </div>
     </div>
     </div>

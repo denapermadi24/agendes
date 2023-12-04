@@ -17,14 +17,14 @@ const Beranda = {
         </a>
       </div>
     </div>
-    <img class="image_hero" src="hero_beranda.png" alt="Hero" />
+    <img class="image_hero" src="./hero-beranda.png" alt="Hero" />
   </div>
 
   <div class="main-content-container">
     <div class="maincontent" id="maincontent">
       <div class="deskripsi_container">
         <div class="nama">
-          <h1>AgenDes</h1>
+          <h2>AgenDes</h2>
         </div>
         <div class="deskripsi_paragraf">
           <p>
@@ -39,15 +39,15 @@ const Beranda = {
       </div>
 
       <div class="layanan_container">
-        <div class="layanan_title">
-          <h1>Layanan Yang Kami Sediakan</h1>
+        <div class="heading_layanan_title">
+          <h2>Layanan Yang Kami Sediakan</h2>
           <hr />
         </div>
         <div class="sub_layanan">
           <div class="layanan">
             <img class="image_layanan" src="jadwal.png" alt="Layanan 1" />
             <div class="layanan_title">
-              <h1>Jadwal Kegiatan Desa </h1>
+              <h3>Jadwal Kegiatan Desa </h3>
             </div>
             <div class="deskripsi_layanan">
               <p>
@@ -56,10 +56,10 @@ const Beranda = {
               </p>
             </div>
           </div>
-          <div class="=layanan">
+          <div class="layanan">
             <img class="image_layanan" src="riwayat.png" alt="Layanan 2" />
             <div class="layanan_title">
-              <h1>Riwayat Kegiatan </h1>
+              <h3>Riwayat Kegiatan </h3>
             </div>
             <div class="deskripsi_layanan">
               <p>
@@ -67,10 +67,10 @@ const Beranda = {
               </p>
             </div>
           </div>
-          <div class="=layanan">
+          <div class="layanan">
             <img class="image_layanan" src="pengingat.png" alt="Layanan 3" />
             <div class="layanan_title">
-              <h1>Pengingat Kegiatan</h1>
+              <h3>Pengingat Kegiatan</h3>
             </div>
             <div class="deskripsi_layanan">
               <p>
@@ -82,15 +82,15 @@ const Beranda = {
       </div>
 
       <div class="layanan_container">
-        <div class="layanan_title">
-          <h1>Mengapa Kami</h1>
+        <div class="heading_layanan_title">
+          <h2>Mengapa Kami</h2>
           <hr />
         </div>
         <div class="sub_layanan">
           <div class="layanan">
             <i class="icon_center fa fa-get-pocket fa-5x"> </i>
             <div class="layanan_title">
-              <h1>Informatif</h1>
+              <h3>Informatif</h3>
             </div>
             <div class="deskripsi_layanan">
               <p>
@@ -103,7 +103,7 @@ const Beranda = {
           <div class="layanan">
             <i class="icon_center fa fa-get-pocket fa-5x"></i>
             <div class="layanan_title">
-              <h1>Efisien</h1>
+              <h3>Efisien</h3>
             </div>
             <div class="deskripsi_layanan">
               <p>
@@ -116,7 +116,7 @@ const Beranda = {
           <div class="layanan">
             <i class="icon_center fa fa-get-pocket fa-5x"></i>
             <div class="layanan_title">
-              <h1>Mudah Digunakan</h1>
+              <h3>Mudah Digunakan</h3>
             </div>
             <div class="deskripsi_layanan">
               <p>
@@ -144,8 +144,7 @@ const Beranda = {
               </a>
             </div>
           </div>
-          <img class="image_hero image_hero_cek_kegiatan" src="beranda_riwayat.png" alt="Hero"
-            style="background-color: aquamarine;" />
+          <img class="image_hero image_hero_cek_kegiatan" src="./cek-riwayat.png" alt="Hero"/>
         </div>
       </div>
   </div>
