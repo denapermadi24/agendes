@@ -6,9 +6,9 @@ import DashboardAdmin from '../views/pages/dashboard-agenda';
 
 const routes = {
   '/': Beranda,
-  '/admin': DashboardAdmin,
-  '/agenda-kegiatan': AgendaKegiatan,
-  '/riwayat-agenda': RiwayatAgenda,
+  //'/admin': DashboardAdmin,
+  //'/agenda-kegiatan': AgendaKegiatan,
+  //'/riwayat-agenda': RiwayatAgenda,
   '/tentang': Tentang,
 };
 
