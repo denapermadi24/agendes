@@ -54,9 +54,9 @@ const DashboardAdmin = {
                 <label for="waktu">Waktu Kegiatan</label>
                 <input id="waktu" type="time" required>
               </div>
-              <div class="input">
-                <label for="tambahan">Tambahan</label>
-                <input id="tambahan" type="text" required>
+              <div class="input input-img_kegiatan">
+                <label for="img-kegiatan">Gambar Kegiatan</label>
+                <input id="img-kegiatan" type="file" accept="image/*" required>
               </div>
               <button id="submit-kegiatan" class="shadow btn-animation" type="submit">SUBMIT</button>
             </form>
