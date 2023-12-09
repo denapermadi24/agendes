@@ -716,6 +716,11 @@ select {
   font-weight: bold;
 }
 
+.input-img_kegiatan {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
 .main-content-container {
   padding: 30px;
 }
