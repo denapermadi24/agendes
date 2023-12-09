@@ -22,10 +22,10 @@ module.exports = function(app){
         .delete(myjson.deleteAgendaById);
 
     app.route('/reminder')
-        .post(myjson.addNewReminder);  
-        
+        .post(myjson.addNewReminder);    
+
     app.route('/reminder')
-        .get(myjson.showAllReminder);  
+        .get(myjson.showAllReminder);
 
     app.route('/reminder/:id')
         .get(myjson.getReminderById);
@@ -34,5 +34,8 @@ module.exports = function(app){
         .put(myjson.updateReminderById);     
 
     app.route('/reminder/:id')
-        .delete(myjson.deleteReminderById);  
+        .delete(myjson.deleteReminderById);
+    
+    app.route('/reminder-user')
+        .get(myjson.showAllRelation);
 }

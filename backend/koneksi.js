@@ -1,16 +1,17 @@
+/* eslint-disable no-var */
 var mysql = require('mysql');
 
-//buat koneksi database
+// buat koneksi database
 const conn = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'agendes'
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'agendes',
 });
 
-conn.connect((err)=>{
-    if(err) throw err;
-    console.log('Mysql terkoneksi');
+conn.connect((err) => {
+  if (err) throw err;
+  console.log('Mysql terkoneksi');
 });
 
-module.exports = conn; 
+module.exports = conn;

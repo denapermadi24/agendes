@@ -268,3 +268,14 @@ exports.deleteReminderById = function (req, res) {
         }
     });
 };
+
+//menampilkan relasi kegiatan dan warga yang mengikuti 
+exports.showAllRelation = function (req, res) {
+    connection.query('SELECT kegiatan_desa.id_kegiatan, kegiatan_desa.nama_kegiatan, kegiatan_desa.waktu, reminder_warga_desa.nama_user, reminder_warga_desa.email_user FROM kegiatan_desa INNER JOIN transaksi_kegiatan ON kegiatan_desa.id_kegiatan = transaksi_kegiatan.id_kegiatan INNER JOIN reminder_warga_desa ON transaksi_kegiatan.id_reminder = reminder_warga_desa.id_reminder;', function (error, rows, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            response.ok(rows, res);
+        }
+    });
+};
