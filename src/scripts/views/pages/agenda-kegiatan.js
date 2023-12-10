@@ -1,4 +1,4 @@
-// import { createRestaurantItemTemplate } from '../templates/templates-creator';
+import PopupDetailAgenda from './popup-detail';
 
 const AgendaKegiatan = {
   async renderPageContent() {
@@ -27,7 +27,7 @@ const AgendaKegiatan = {
           <article class="item-agenda-kegiatan shadow">
             <img src="./jadwal.png" class="list-img-agenda-kegiatan" alt="gambar list agenda">
             <section class="item-riwayat-article">
-              <a href="#">
+              <a href="#/detail-kegiatan">
                 <h3>Gotong Royong Membersihkan Pantai</h3>
               </a>
               <p>Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
@@ -65,7 +65,7 @@ const AgendaKegiatan = {
           <article class="item-agenda-kegiatan shadow">
             <img src="./jadwal.png" class="list-img-agenda-kegiatan" alt="gambar list agenda">
             <section class="item-riwayat-article">
-              <a href="#">
+              <a href="#/detail-kegiatan">
                 <h3>Gotong Royong Membersihkan Pantai</h3>
               </a>
               <p>Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
@@ -103,7 +103,7 @@ const AgendaKegiatan = {
           <article class="item-agenda-kegiatan shadow">
             <img src="./jadwal.png" class="list-img-agenda-kegiatan" alt="gambar list agenda">
             <section class="item-riwayat-article">
-              <a href="#">
+              <a href="#/detail-kegiatan">
                 <h3>Gotong Royong Membersihkan Pantai</h3>
               </a>
               <p>Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
@@ -141,7 +141,7 @@ const AgendaKegiatan = {
           <article class="item-agenda-kegiatan shadow">
             <img src="./jadwal.png" class="list-img-agenda-kegiatan" alt="gambar list agenda">
             <section class="item-riwayat-article">
-              <a href="#">
+              <a href="#/detail-kegiatan">
                 <h3>Gotong Royong Membersihkan Pantai</h3>
               </a>
               <p>Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
@@ -179,7 +179,7 @@ const AgendaKegiatan = {
           <article class="item-agenda-kegiatan shadow">
             <img src="./jadwal.png" class="list-img-agenda-kegiatan" alt="gambar list agenda">
             <section class="item-riwayat-article">
-              <a href="#">
+              <a href="#/detail-kegiatan">
                 <h3>Gotong Royong Membersihkan Pantai</h3>
               </a>
               <p>Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
@@ -221,7 +221,7 @@ const AgendaKegiatan = {
   },
 
   async applyDataContent() {
-    // TODO: Isi data halaman
+    PopupDetailAgenda.path('#/agenda-kegiatan');
   },
 };
 

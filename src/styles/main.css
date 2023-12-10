@@ -348,7 +348,10 @@ hr {
   border-radius: 0 10px 10px 0;
 }
 
-.btn-search:active {
+.btn-search:active,
+.close:active,
+#submit-kegiatan:active,
+#ikuti-kegiatan:active {
   transform: scale(0.97);
 }
 
@@ -690,7 +693,8 @@ footer {
   margin: 10px 0;
 }
 
-.input_section>form>button {
+#submit-kegiatan,
+#ikuti-kegiatan {
   background-color: #fbbc26;
   color: #000000;
   font-weight: 500;

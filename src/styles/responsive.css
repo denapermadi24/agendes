@@ -116,6 +116,11 @@
 
 @media screen and (max-width: 1200px) {
 
+  /* Popup Detail Kegiatan */
+  .popup-detail-content {
+    width: 70%;
+  }
+
   .image_hero,
   .img-riwayat-kegiatan {
     display: none;
@@ -151,6 +156,10 @@
 }
 
 @media screen and (max-width: 855px) {
+  .popup-detail-content {
+    width: 90%;
+  }
+
   footer {
     padding: 70px;
     height: 400px;
@@ -343,6 +352,15 @@
 }
 
 @media screen and (max-width: 700px) {
+  .img-detail-kegiatan {
+    width: 100%;
+  }
+
+  .waktu-detail-kegiatan {
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .list-riwayat-kegiatan {
     grid-template-columns: 1fr;
   }
