@@ -4,7 +4,7 @@ import '../styles/popup.css';
 import '../styles/login.css';
 import '../styles/responsive.css';
 import App from './views/app';
-import swRegister from './utils/sw-register';
+// import swRegister from './utils/sw-register';
 
 const $ = require('jquery');
 
@@ -45,5 +45,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
-  swRegister();
+  // swRegister();
 });

@@ -30,7 +30,7 @@ const RiwayatAgenda = {
             <a href="#">
               <h3>Gotong Royong Membersihkan Pantai</h3>
             </a>
-            <p>Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
+            <p class="desc-kegiatan">Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
               bersih-bersih pantai untuk mewujudkan pantai yang lestari dan indah.</p>
             <section class="waktu-kegiatan">
               <p>
@@ -68,7 +68,7 @@ const RiwayatAgenda = {
             <a href="#">
               <h3>Gotong Royong Membersihkan Pantai</h3>
             </a>
-            <p>Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
+            <p class="desc-kegiatan">Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
               bersih-bersih pantai untuk mewujudkan pantai yang lestari dan indah.</p>
             <section class="waktu-kegiatan">
               <p>
@@ -106,7 +106,7 @@ const RiwayatAgenda = {
             <a href="#">
               <h3>Gotong Royong Membersihkan Pantai</h3>
             </a>
-            <p>Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
+            <p class="desc-kegiatan">Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
               bersih-bersih pantai untuk mewujudkan pantai yang lestari dan indah.</p>
             <section class="waktu-kegiatan">
               <p>
