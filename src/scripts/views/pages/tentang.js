@@ -138,6 +138,7 @@ const Tentang = {
       </div>
     </div>
   </div>
+  </div>
     `;
   },
 

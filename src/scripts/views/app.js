@@ -12,6 +12,7 @@ class App {
       const page = routes[url];
       this._mainContent.innerHTML = await page.renderPageContent();
       await page.applyDataContent();
+      await page.afterRender();
     } catch (error) {
       console.log(error);
     }

@@ -68,7 +68,6 @@
 }
 
 @media (max-width: 515px) {
-
   /* Ubah ukuran padding saat lebar layar maksimum 480px */
   .grid-container {
     grid-template-columns: 2fr 2fr;
@@ -115,7 +114,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-
   /* Popup Detail Kegiatan */
   .popup-detail-content {
     width: 70%;
@@ -179,7 +177,6 @@
 }
 
 @media screen and (max-width: 799px) {
-
   .hero_title,
   .hero_subtitle,
   .exchange_button {
@@ -222,7 +219,6 @@
 }
 
 @media (max-width: 768px) {
-
   .footer-content,
   .social-media,
   .footer-links,
