@@ -1,4 +1,4 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/popup.css';
 import '../styles/login.css';
@@ -6,37 +6,14 @@ import '../styles/responsive.css';
 import App from './views/app';
 // import swRegister from './utils/sw-register';
 
-const $ = require('jquery');
-
-const drawer = document.querySelector('#drawer');
 const mainContent = document.querySelector('#main-content');
+const skipLink = document.querySelector('.skip-link');
 
 const app = new App(mainContent);
 
-$('.skip-link').on('click', (event) => {
+skipLink.addEventListener('click', (event) => {
   event.preventDefault();
   document.querySelector('main').focus();
-});
-
-$('#menu').on('click', (event) => {
-  event.stopPropagation();
-  if (drawer) {
-    drawer.classList.toggle('open');
-  }
-});
-
-$('.hero').on('click', (event) => {
-  event.stopPropagation();
-  if (drawer) {
-    drawer.classList.remove('open');
-  }
-});
-
-$('main').on('click', (event) => {
-  event.stopPropagation();
-  if (drawer) {
-    drawer.classList.remove('open');
-  }
 });
 
 window.addEventListener('hashchange', () => {
