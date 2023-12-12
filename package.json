@@ -50,6 +50,7 @@
     "multer": "^1.4.5-lts.1",
     "mysql": "^2.18.1",
     "regenerator-runtime": "^0.14.0",
+    "sweetalert2": "^11.10.1",
     "workbox-window": "^7.0.0"
   }
 }

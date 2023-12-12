@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <title>AgenDes</title>
   </head>
@@ -25,11 +26,11 @@
 
       <ul class="menu" id="menu">
         <li></li>
-        <li><a class="nav__item" href="/">Beranda</a></li>
+        <li id="adminDashboard"><a class="nav__item" href="/">Beranda</a></li>
         <li><a class="nav__item" href="#/agenda-kegiatan">Agenda</a></li>
         <li><a class="nav__item" href="#/riwayat-agenda">Riwayat</a></li>
         <li><a class="nav__item" href="#/tentang">Tentang</a></li>
-        <li><a class="nav__itemadmn" href="#/login">Admin</a></li>
+        <li id="admin"><a class="nav__itemadmn" href="#/login">Admin</a></li>
       </ul>
     </header>
     <main id="main-content" tabindex="0"></main>
@@ -47,11 +48,11 @@
         <div class="footer-links">
           <h2>Menu</h2>
           <ul>
-            <li><a href="/">Beranda</a></li>
+            <li id="adminDashboardFooter"><a class="nav__item" href="/">Beranda</a></li>
             <li><a href="#/agenda-kegiatan">Agenda</a></li>
             <li><a href="#/riwayat-agenda">Riwayat</a></li>
             <li><a href="#/tentang">Tentang</a></li>
-            <li><a href="#/admin">Admin</a></li>
+            <li id="adminFooterLink"><a class="nav__itemadmn" href="#/login">Admin</a></li>
           </ul>
         </div>
         <div class="social-media">
