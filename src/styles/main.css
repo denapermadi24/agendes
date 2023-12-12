@@ -498,11 +498,15 @@ hr {
 }
 
 .item-riwayat-article {
+  padding: 20px;
+}
+
+.content-riwayat-article {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 15px;
   gap: 25px;
-  padding: 20px;
 }
 
 .riwayat-agenda-kegiatan>h2 {
