@@ -1,4 +1,6 @@
 import popupDetailKegiatan from '../templates/popup';
+import UrlParser from '../../routes/url-parser';
+import AgendaSource from '../../data/api-source';
 
 const PopupDetailAgenda = {
   _myPath: '',
@@ -16,6 +18,11 @@ const PopupDetailAgenda = {
   },
 
   async applyDataContent() {
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const responseJson = await AgendaSource.detailAgenda(url.id);
+    const { data } = responseJson;
+    console.log(data);
+
     const popupDetail = document.querySelector('.popup-detail');
 
     popupDetail.innerHTML = `${popupDetailKegiatan(this._myPath)}`;

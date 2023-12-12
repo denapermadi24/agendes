@@ -10,7 +10,7 @@ const routes = {
   '/': Beranda,
   '/admin': DashboardAdmin,
   '/agenda-kegiatan': AgendaKegiatan,
-  '/detail-kegiatan': PopupDetailAgenda,
+  '/detail-kegiatan/:id': PopupDetailAgenda,
   '/riwayat-agenda': RiwayatAgenda,
   '/tentang': Tentang,
   '/login': AdminLogin,
