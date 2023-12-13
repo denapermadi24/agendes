@@ -1,6 +1,7 @@
 import PopupDetailAgenda from './popup-detail';
 import AgendaSource from '../../data/api-source';
 import CreateAgendaItem from '../templates/template-agenda-item';
+import FormatDateTime from '../../utils/format-date-time';
 
 const AgendaKegiatan = {
   async renderPageContent() {
@@ -38,8 +39,12 @@ const AgendaKegiatan = {
     console.log(listAgenda);
     const postListAgenda = document.querySelector('.list-agenda-kegiatan');
 
+    // const today = new Date();
     listAgenda.forEach((agenda) => {
-      postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard(agenda)}`;
+      const waktuKegiatan = new Date(agenda.waktu);
+      const date = FormatDateTime.formatDate.format(waktuKegiatan);
+      const time = FormatDateTime.formatTime.format(waktuKegiatan);
+      postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
     });
 
     PopupDetailAgenda.path('#/agenda-kegiatan');

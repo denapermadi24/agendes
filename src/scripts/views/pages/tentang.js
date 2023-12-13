@@ -15,7 +15,7 @@ const Tentang = {
           memahami lebih dalam mengenai nilai-nilai kami dan tujuan kami dalam menciptakan solusi yang bermanfaat,
           Anda akan semakin yakin dengan apa yang kami tawarkan.
         </p>
-        <a class="exchange_button" href="#/agenda">
+        <a class="exchange_button" href="#/agenda-kegiatan">
           Cek Agenda
         </a>
       </div>

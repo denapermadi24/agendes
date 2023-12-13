@@ -13,7 +13,6 @@ const AgendaSource = {
   async detailAgenda(id) {
     try {
       const response = await fetch(`https://agendes-back-end.vercel.app/agenda/${id}`);
-      // console.log(response.json());
       return response.json();
     } catch (error) {
       console.log(error);
