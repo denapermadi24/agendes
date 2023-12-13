@@ -29,6 +29,8 @@ const AdminLogin = {
     // Attach the event listener after rendering the page content
     console.log('Applying data content...');
     document.getElementById('loginButton').addEventListener('click', login);
+
+    window.logout = logout;
   },
 };
 
@@ -63,17 +65,10 @@ async function login() {
       Swal.fire({
         icon: 'success',
         title: 'Login Successful',
-        text: 'Redirecting to admin dashboard...',
+        text: 'Diarahkan Ke Halaman Admin Dashboard...',
       }).then(() => {
-        document.getElementById('adminDashboard').innerHTML = '<a class="nav__item" href="#/admin">Dashboard</a>';
-
-        document.getElementById('adminDashboardFooter').innerHTML = '<a href="#/admin">Dashboard</a>';
-
-        // Update the admin link to the logout link
-        document.getElementById('admin').innerHTML = '<a class="nav__itemadmn" href="#" onclick="logout()">Logout</a>';
-
-        // Update the admin link in the footer to the logout link
-        document.getElementById('adminFooterLink').innerHTML = '<a href="#" onclick="logout()">Logout</a>';
+        // Update navigation menu after successful login
+        updateNavigationMenu();
 
         // Redirect to admin dashboard
         window.location.href = '#/admin';
@@ -83,11 +78,50 @@ async function login() {
       Swal.fire({
         icon: 'error',
         title: 'Login Failed',
-        text: result.message,
+        text: 'Email Atau Password Anda Salah...',
       });
     }
   } catch (error) {
     console.error('Error during login:', error.message);
+  }
+}
+
+function updateNavigationMenu() {
+  // Update navigation menu after successful login
+  document.getElementById('adminDashboard').innerHTML = '<a class="nav__item" href="#/admin">Dashboard</a>';
+  document.getElementById('adminDashboardFooter').innerHTML = '<a href="#/admin">Dashboard</a>';
+  document.getElementById('admin').innerHTML = '<a class="nav__itemadmn" href="#" onclick="logout()">Logout</a>';
+  document.getElementById('adminFooterLink').innerHTML = '<a href="#" onclick="logout()">Logout</a>';
+}
+
+async function logout() {
+  try {
+    // Perform logout actions
+    // For example, clear any user session data
+
+    // Update navigation menu after logout
+    document.getElementById('adminDashboard').innerHTML = '<a class="nav__item" href="#/">Beranda</a>';
+    document.getElementById('adminDashboardFooter').innerHTML = '<a href="#/">Beranda</a>'; // You may want to clear the footer link as well
+    document.getElementById('admin').innerHTML = '<a class="nav__itemadmn" href="#/login">Admin</a>';
+    document.getElementById('adminFooterLink').innerHTML = '<a href="#/Login">Admin</a>'; // You may want to clear the footer link as well
+
+    // Show success message using SweetAlert
+    Swal.fire({
+      icon: 'success',
+      title: 'Logout Successful',
+      text: 'You have been logged out successfully!',
+    }).then(() => {
+      // Redirect to home page after logout
+      window.location.href = '#/login';
+    });
+  } catch (error) {
+    // Show error message using SweetAlert if logout fails
+    Swal.fire({
+      icon: 'error',
+      title: 'Logout Failed',
+      text: 'An error occurred during logout. Please try again.',
+    });
+    console.error('Error during logout:', error.message);
   }
 }
 
