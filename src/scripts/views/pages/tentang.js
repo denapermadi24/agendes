@@ -115,7 +115,7 @@ const Tentang = {
           <h2>Ni Putu Amelia Devasya Putri</h2>
         </div>
         <div class="nama_univ">
-          <h2>Institut Teknologi dan Bisnis STIKOM Bali</h2>
+          <h2>ITB STIKOM Bali</h2>
         </div>
       </div>
 
