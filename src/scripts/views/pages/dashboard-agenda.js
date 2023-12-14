@@ -40,8 +40,11 @@ const DashboardAdmin = {
               <div class="input">
               <label for="option-kegiatan">Jenis Kegiatan</label>
                 <select id="option-kegiatan">
-                  <option value="renovasi-masjid">Renovasi masjid</option>
-                  <option value="pembersihan-sungai">Pembersihan sungai</option>
+                  <option value="Gotong Royong">Gotong Royong</option>
+                  <option value="Rapat/Musyawarah">Rapat/Musyawarah</option>
+                  <option value="Posyandu">Posyandu</option>
+                  <option value="Kesehatan">Kesehatan</option>
+                  <option value="Lomba">Lomba</option>
                 </select>
               </div>
               <div class="input">
