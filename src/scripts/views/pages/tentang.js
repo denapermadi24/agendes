@@ -124,7 +124,7 @@ const Tentang = {
           </div>
           <div class="icon_medsos-avtr">
             <a href="https://www.instagram.com/dnaprmdi/" class="medsos"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="medsos"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/dena-indiarto-permadi-74436126a/" class="medsos"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
         <div class="nama_team">

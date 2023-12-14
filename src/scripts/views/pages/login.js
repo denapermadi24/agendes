@@ -32,7 +32,13 @@ const AdminLogin = {
     await updateNavigationMenu();
 
     // Attach the event listener after rendering the page content
-    document.getElementById('loginButton').addEventListener('click', login);
+    const loginButton = document.getElementById('loginButton');
+
+    if (loginButton) {
+      loginButton.addEventListener('click', login);
+    } else {
+      console.error('Login button not found.');
+    }
 
     window.logout = logout;
   },
