@@ -28,12 +28,12 @@ const Beranda = {
         </div>
         <div class="deskripsi_paragraf">
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum."
+             Dalam era teknologi informasi yang berkembang pesat, keberadaan Agenda Desa atau yang dikenal sebagai "Agendes"
+             menjadi kunci dalam memfasilitasi dan meningkatkan partisipasi masyarakat dalam berbagai kegiatan di desa mereka.
+             Agendes bukan sekadar platform, tetapi sebuah inovasi yang menghubungkan, memberdayakan, dan membuat kegiatan desa
+             menjadi lebih informatif, efisien, dan mudah diakses bagi semua warga. Dengan mengintegrasikan teknologi, 
+             Agendes menciptakan solusi yang tidak hanya memudahkan pelaksanaan kegiatan desa, tetapi juga meningkatkan keterlibatan
+             masyarakat secara keseluruhan..
           </p>
         </div>
       </div>
@@ -94,9 +94,10 @@ const Beranda = {
             </div>
             <div class="deskripsi_layanan">
               <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+                 Agendes berperan sebagai pusat informasi yang menyajikan segala hal yang berkaitan dengan kegiatan desa.
+                 Dengan adanya fitur kalender dan fitur notifikasi real-time memastikan bahwa setiap perubahan atau tambahan
+                 nformasi segera diketahui oleh masyarakat. Ini menciptakan lingkungan informasional yang dinamis dan 
+                 memungkinkan warga desa untuk tetap terhubung dengan perkembangan terkini di lingkungan mereka..
               </p>
             </div>
           </div>
@@ -107,9 +108,11 @@ const Beranda = {
             </div>
             <div class="deskripsi_layanan">
               <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+                 Agendes membawa efisiensi dalam pendaftaran dan pengelolaan kegiatan desa.
+                 Proses pendaftaran yang mudah dan dilakukan secara daring meminimalkan kerumitan administratif. 
+                 Warga desa dapat dengan cepat mendaftarkan kegiatan atau usulan mereka tanpa perlu melewati proses yang rumit.
+                 Hal ini tidak hanya mempercepat proses persetujuan, tetapi juga mengurangi hambatan administratif yang
+                 mungkin menghambat partisipasi masyarakat..
               </p>
             </div>
           </div>
@@ -120,9 +123,11 @@ const Beranda = {
             </div>
             <div class="deskripsi_layanan">
               <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+                 Salah satu kunci keberhasilan Agendes adalah antarmuka pengguna yang ramah dan mudah digunakan. 
+                 Meskipun berbasis teknologi, Agendes dirancang untuk dapat diakses oleh semua kalangan masyarakat,
+                 termasuk mereka yang tidak terbiasa dengan teknologi informasi. 
+                 Desain yang responsif dan navigasi yang intuitif memastikan bahwa setiap warga dapat dengan mudah 
+                 mengakses informasi dan berpartisipasi dalam kegiatan desa..
               </p>
             </div>
           </div>
