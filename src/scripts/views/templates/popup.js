@@ -1,4 +1,4 @@
-const popupDetailKegiatan = (path) => `
+const popupDetailKegiatan = (path, data) => `
     <article class="popup-detail-content">
       <header>
         <h1>Detail Kegiatan</h1>
@@ -6,8 +6,8 @@ const popupDetailKegiatan = (path) => `
       </header>
       <section class="content-detail">
         <section class="profile-detail-kegiatan">
-          <h2>Gotong Royong Membersihkan Pantai</h2>
-          <img src="./jadwal.png" class="img-detail-kegiatan" alt="gambar detail kegiatan">
+          <h2>${data.nama_kegiatan}</h2>
+          <img src="${data.foto_kegiatan}" class="img-detail-kegiatan" alt="gambar detail kegiatan">
         </section>
         <section class="waktu-detail-kegiatan">
           <p>
@@ -33,17 +33,16 @@ const popupDetailKegiatan = (path) => `
                 d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
               <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
             </svg>
-            Pantai Sanur
+            ${data.tempat_kegiatan}
           </p>
         </section>
         <section class="deskripsi-detail-kegiatan">
           <h3>Deskripsi</h3>
           <p class="content_deskripsi-detail-kegiatan">
-            Tidak hanya menikmati keindahan pantai, tetapi juga merawatnya. Ayo bergabung dalam upaya
-            bersih-bersih pantai untuk mewujudkan pantai yang lestari dan indah.
+          ${data.deskripsi_kegiatan}
           </p>
-          <p class="content_deskripsi-detail-kegiatan"><span>Jenis Kegiatan: </span>Gotong royong</p>
-          <p class="content_deskripsi-detail-kegiatan"><span>Catatan: </span>Bawa alat untuk bersih-bersih</p>
+          <p class="content_deskripsi-detail-kegiatan"><span>Jenis Kegiatan: </span>${data.jenis_kegiatan}</p>
+          <p class="content_deskripsi-detail-kegiatan"><span>Catatan: </span>${data.tambahan}</p>
         </section>
         <button id="ikuti-kegiatan" class="shadow">Ikuti Kegiatan</button>
       </section>
