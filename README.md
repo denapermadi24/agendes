@@ -39,3 +39,20 @@
  </div>
 
  </br>
+
+ <h2 align="center"> Deploy & Database </h2>
+
+<div align="center" style="text-align: justify">
+  <table>
+    <tr>
+      <th> Deploy </th>
+      <th> Database </th>
+    </tr>
+    <tr>
+     <td> <a >  Netlify </a> || <a href="https://agendes-back-end.vercel.app/"> Vercel </a>  </td>
+     <td>  MySQL  </td>
+    </tr>
+  </table>
+</div> 
+
+</br>
