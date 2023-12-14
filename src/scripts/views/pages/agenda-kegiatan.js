@@ -42,30 +42,17 @@ const AgendaKegiatan = {
 
     listAgenda.forEach((agenda) => {
       const waktuKegiatan = new Date(agenda.waktu);
-      // console.log('============ waktu today ================');
-      // console.log(getToday.dateToday);
-      // console.log(getToday.monthToday);
-      // console.log(getToday.yearToday);
-      // console.log('============ waktu kegiatan ================');
-      // console.log(waktuKegiatan.getDate());
-      // console.log(waktuKegiatan.getMonth() + 1);
-      // console.log(waktuKegiatan.getFullYear());
-      // console.log('============ kondisi ================');
-      // console.log(getToday.dateToday <= waktuKegiatan.getDate());
-      // console.log(getToday.monthToday <= waktuKegiatan.getMonth() + 1);
-      // console.log(getToday.yearToday <= waktuKegiatan.getFullYear());
-      // console.log('============ hasil kondisi ================');
-      // console.log(getToday.dateToday <= waktuKegiatan.getDate()
-      //   && getToday.monthToday <= waktuKegiatan.getMonth() + 1
-      //   && getToday.yearToday <= waktuKegiatan.getFullYear());
 
       const date = FormatDateTime.formatDate.format(waktuKegiatan);
       const time = FormatDateTime.formatTime.format(waktuKegiatan);
 
-      if (getToday.dateToday <= waktuKegiatan.getDate()
-        && getToday.monthToday <= waktuKegiatan.getMonth() + 1
-        && getToday.yearToday <= waktuKegiatan.getFullYear()) {
-        postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
+      if (waktuKegiatan.getFullYear() >= getToday.yearToday) {
+        if (waktuKegiatan.getFullYear() > getToday.yearToday) {
+          postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
+        } else if (waktuKegiatan.getMonth() + 1 >= getToday.monthToday
+          && waktuKegiatan.getDate() >= getToday.dateToday) {
+          postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
+        }
       }
     });
 
