@@ -130,25 +130,9 @@ const DashboardAdmin = {
       formData.append('tambahan', 'test');
       formData.append('foto_kegiatan', inputGambar.files[0]);
 
-      // const data = {
-      //   nama_kegiatan: inputKegiatan.value,
-      //   deskripsi_kegiatan: inputDeskripsi.value,
-      //   tempat_kegiatan: inputTempat.value,
-      //   jenis_kegiatan: inputJenis.value,
-      //   waktu: ${inputTanggal.value} ${inputWaktu.value},
-      //   tambahan: 'tesss',
-      //   foto_kegiatan: inputGambar.value.files[0],
-      // };
-
-      console.log(formData);
-
       try {
         const response = await fetch(apiEndpoint, {
           method: 'POST',
-          // headers: {
-          //   'Content-Type': 'application/json',
-          // },
-          // body: JSON.stringify(data),
           body: formData,
         });
 
@@ -157,8 +141,23 @@ const DashboardAdmin = {
         }
 
         const responseData = await response.json();
+
+        // Show success message using SweetAlert
+        Swal.fire({
+          icon: 'success',
+          title: 'Agenda Added',
+          text: 'The agenda has been added successfully!',
+        });
+
         console.log('Response Data:', responseData);
       } catch (error) {
+        // Show error message using SweetAlert
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed to Add Agenda',
+          text: error.message || 'There was an error while adding the agenda. Please try again.',
+        });
+
         console.error('Error:', error.message);
       }
     });
@@ -193,26 +192,6 @@ async function handleFormSubmission(event) {
     const result = await response.json();
 
     return result;
-    // Check if the request was successful
-    if (response.success) {
-      // Show success message using SweetAlert
-      Swal.fire({
-        icon: 'success',
-        title: 'Agenda Added',
-        text: 'The agenda has been added successfully!',
-      });
-      // Handle success, you may want to show a success message or redirect
-      console.log('Agenda added successfully!');
-    } else {
-      // Show error message using SweetAlert
-      Swal.fire({
-        icon: 'error',
-        title: 'Failed to Add Agenda',
-        text: response.message || 'There was an error while adding the agenda. Please try again.',
-      });
-      // Handle error, you may want to show an error message
-      console.error('Failed to add agenda:', response.message || 'Unknown error');
-    }
   } catch (error) {
     // Show error message using SweetAlert
     Swal.fire({
