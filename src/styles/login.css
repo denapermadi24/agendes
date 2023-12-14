@@ -4,7 +4,8 @@ body {
 }
 
 .box-form {
-  margin: 50px auto; /* Add margin to create space between navbar and login form */
+  margin: 50px auto;
+  /* Add margin to create space between navbar and login form */
   width: 80%;
   background: #ffffff;
   border-radius: 10px;
@@ -21,7 +22,8 @@ body {
 /* Adjustments for smaller screens */
 @media (max-width: 980px) {
   .box-form {
-    margin: 20px auto; /* Adjust margin for smaller screens */
+    margin: 20px auto;
+    /* Adjust margin for smaller screens */
     flex-flow: wrap;
     text-align: center;
     align-content: center;

@@ -44,10 +44,15 @@ const RiwayatAgenda = {
       const date = FormatDateTime.formatDate.format(waktuKegiatan);
       const time = FormatDateTime.formatTime.format(waktuKegiatan);
 
-      if (waktuKegiatan.getDate() < getToday.dateToday
-        || waktuKegiatan.getMonth() + 1 <= getToday.monthToday) {
-        if (waktuKegiatan.getFullYear() <= getToday.yearToday) {
+      if (waktuKegiatan.getFullYear() <= getToday.yearToday) {
+        if (waktuKegiatan.getFullYear() < getToday.yearToday) {
           listRiwayatKegiatan.innerHTML += `${CreateAgendaItem.riwayatAgendaItemCard({ agenda, date, time })}`;
+        } else if (waktuKegiatan.getMonth() + 1 <= getToday.monthToday) {
+          if (waktuKegiatan.getMonth() + 1 < getToday.monthToday) {
+            listRiwayatKegiatan.innerHTML += `${CreateAgendaItem.riwayatAgendaItemCard({ agenda, date, time })}`;
+          } else if (waktuKegiatan.getDate() <= getToday.dateToday) {
+            listRiwayatKegiatan.innerHTML += `${CreateAgendaItem.riwayatAgendaItemCard({ agenda, date, time })}`;
+          }
         }
       }
     });
