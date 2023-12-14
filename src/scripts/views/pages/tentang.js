@@ -70,7 +70,7 @@ const Tentang = {
           </div>
           <div class="icon_medsos-avtr">
             <a href="https://www.instagram.com/t.laluridho/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="medsos" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/lalu-ridho-taufikurahman-6001a8239/" class="medsos" target="_blank"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
         <div class="nama_team">
