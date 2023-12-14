@@ -129,10 +129,16 @@ function updateNavigationMenu() {
 
     if (adminLink) {
       adminLink.innerHTML = '<a class="nav__itemadmn" href="#/login">Admin</a>';
+      if (typeof login === 'function') {
+        adminLink.removeEventListener('click', logout);
+      }
     }
 
     if (adminFooterLink) {
       adminFooterLink.innerHTML = '<a href="#/Login">Admin</a>';
+      if (typeof login === 'function') {
+        adminFooterLink.removeEventListener('click', logout);
+      }
     }
   }
 }

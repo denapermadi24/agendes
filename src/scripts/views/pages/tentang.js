@@ -123,7 +123,7 @@ const Tentang = {
             <img class="icon_team" src="test.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
-            <a href="#" class="medsos"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.instagram.com/dnaprmdi/" class="medsos"><i class="fa fa-instagram"></i></a>
             <a href="#" class="medsos"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
