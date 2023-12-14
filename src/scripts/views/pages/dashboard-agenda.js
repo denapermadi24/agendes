@@ -1,5 +1,70 @@
 const apiEndpoint = 'https://agendes-back-end.vercel.app/agenda';
 
+// Mock function to simulate API call
+async function addAgenda(data) {
+  // Use fetch or any other mechanism to send data to the API endpoint
+  const response = await fetch(apiEndpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  // Parse the response
+  const result = await response.json();
+
+  return result;
+}
+
+// Handle form submission
+async function handleFormSubmission(event) {
+  event.preventDefault();
+
+  // Get form data
+  const formData = new FormData(event.target);
+
+  // Convert FormData to an object
+  const formDataObject = {};
+  formData.forEach((value, key) => {
+    formDataObject[key] = value;
+  });
+
+  try {
+    // Send data to the API endpoint
+    const response = await addAgenda(formDataObject);
+
+    // Check if the request was successful
+    if (response.success) {
+      // Show success message using SweetAlert
+      Swal.fire({
+        icon: 'success',
+        title: 'Agenda Added',
+        text: 'The agenda has been added successfully!',
+      });
+      // Handle success, you may want to show a success message or redirect
+      console.log('Agenda added successfully!');
+    } else {
+      // Show error message using SweetAlert
+      Swal.fire({
+        icon: 'error',
+        title: 'Failed to Add Agenda',
+        text: response.message || 'There was an error while adding the agenda. Please try again.',
+      });
+      // Handle error, you may want to show an error message
+      console.error('Failed to add agenda:', response.message || 'Unknown error');
+    }
+  } catch (error) {
+    // Show error message using SweetAlert
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'An error occurred. Please try again later.',
+    });
+    console.error('Error during agenda submission:', error.message);
+  }
+}
+
 const DashboardAdmin = {
   async renderPageContent() {
     return `
@@ -107,71 +172,6 @@ const DashboardAdmin = {
     form.addEventListener('submit', handleFormSubmission);
   },
 };
-
-// Handle form submission
-async function handleFormSubmission(event) {
-  event.preventDefault();
-
-  // Get form data
-  const formData = new FormData(event.target);
-
-  // Convert FormData to an object
-  const formDataObject = {};
-  formData.forEach((value, key) => {
-    formDataObject[key] = value;
-  });
-
-  try {
-    // Send data to the API endpoint
-    const response = await addAgenda(formDataObject);
-
-    // Check if the request was successful
-    if (response.success) {
-      // Show success message using SweetAlert
-      Swal.fire({
-        icon: 'success',
-        title: 'Agenda Added',
-        text: 'The agenda has been added successfully!',
-      });
-      // Handle success, you may want to show a success message or redirect
-      console.log('Agenda added successfully!');
-    } else {
-      // Show error message using SweetAlert
-      Swal.fire({
-        icon: 'error',
-        title: 'Failed to Add Agenda',
-        text: response.message || 'There was an error while adding the agenda. Please try again.',
-      });
-      // Handle error, you may want to show an error message
-      console.error('Failed to add agenda:', response.message || 'Unknown error');
-    }
-  } catch (error) {
-    // Show error message using SweetAlert
-    Swal.fire({
-      icon: 'error',
-      title: 'Error',
-      text: 'An error occurred. Please try again later.',
-    });
-    console.error('Error during agenda submission:', error.message);
-  }
-}
-
-// Mock function to simulate API call
-async function addAgenda(data) {
-  // Use fetch or any other mechanism to send data to the API endpoint
-  const response = await fetch(apiEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
-
-  // Parse the response
-  const result = await response.json();
-
-  return result;
-}
 
 export default DashboardAdmin;
 

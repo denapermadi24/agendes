@@ -1,6 +1,8 @@
 import PopupDetailAgenda from './popup-detail';
 import AgendaSource from '../../data/api-source';
 import CreateAgendaItem from '../templates/template-agenda-item';
+import FormatDateTime from '../../utils/format-date-time';
+import getToday from '../../utils/time-today';
 
 const AgendaKegiatan = {
   async renderPageContent() {
@@ -39,7 +41,32 @@ const AgendaKegiatan = {
     const postListAgenda = document.querySelector('.list-agenda-kegiatan');
 
     listAgenda.forEach((agenda) => {
-      postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard(agenda)}`;
+      const waktuKegiatan = new Date(agenda.waktu);
+      // console.log('============ waktu today ================');
+      // console.log(getToday.dateToday);
+      // console.log(getToday.monthToday);
+      // console.log(getToday.yearToday);
+      // console.log('============ waktu kegiatan ================');
+      // console.log(waktuKegiatan.getDate());
+      // console.log(waktuKegiatan.getMonth() + 1);
+      // console.log(waktuKegiatan.getFullYear());
+      // console.log('============ kondisi ================');
+      // console.log(getToday.dateToday <= waktuKegiatan.getDate());
+      // console.log(getToday.monthToday <= waktuKegiatan.getMonth() + 1);
+      // console.log(getToday.yearToday <= waktuKegiatan.getFullYear());
+      // console.log('============ hasil kondisi ================');
+      // console.log(getToday.dateToday <= waktuKegiatan.getDate()
+      //   && getToday.monthToday <= waktuKegiatan.getMonth() + 1
+      //   && getToday.yearToday <= waktuKegiatan.getFullYear());
+
+      const date = FormatDateTime.formatDate.format(waktuKegiatan);
+      const time = FormatDateTime.formatTime.format(waktuKegiatan);
+
+      if (getToday.dateToday <= waktuKegiatan.getDate()
+        && getToday.monthToday <= waktuKegiatan.getMonth() + 1
+        && getToday.yearToday <= waktuKegiatan.getFullYear()) {
+        postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
+      }
     });
 
     PopupDetailAgenda.path('#/agenda-kegiatan');
