@@ -105,8 +105,8 @@ const Tentang = {
             <img class="icon_team" src="test.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
-            <a href="#" class="medsos"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="medsos"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/ameldvsya/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="medsos" target="_blank"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
         <div class="nama_team">
