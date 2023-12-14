@@ -31,12 +31,10 @@ const Tentang = {
         </div>
         <div class="deskripsi_paragraf">
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum."
+             Selamat datang di "AgenDes" Sebuah inisiatif yang dilahirkan dari tekad untuk memperkuat
+             dan memajukan masyarakat desa melalui pemanfaatan teknologi informasi. Kami adalah tim yang
+             berdedikasi untuk memberikan solusi inovatif yang membantu menghubungkan, memberdayakan, dan 
+             meningkatkan kualitas hidup masyarakat desa di seluruh penjuru..
           </p>
         </div>
       </div>
