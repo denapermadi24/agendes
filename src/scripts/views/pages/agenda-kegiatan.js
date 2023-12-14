@@ -49,8 +49,7 @@ const AgendaKegiatan = {
       if (waktuKegiatan.getFullYear() >= getToday.yearToday) {
         if (waktuKegiatan.getFullYear() > getToday.yearToday) {
           postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
-        } else if (waktuKegiatan.getMonth() + 1 >= getToday.monthToday
-          && waktuKegiatan.getDate() >= getToday.dateToday) {
+        } else if (waktuKegiatan.getMonth() + 1 >= getToday.monthToday && waktuKegiatan.getDate() >= getToday.dateToday) {
           postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
         }
       }
