@@ -51,7 +51,7 @@ const Tentang = {
             <img class="icon_team" src="test.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
-            <a href="#" class="medsos"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.instagram.com/jaalalln/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/jalal-ludin-a0a70b262/" class="medsos" target="_blank"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
