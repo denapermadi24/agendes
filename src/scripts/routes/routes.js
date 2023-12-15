@@ -5,6 +5,7 @@ import Beranda from '../views/pages/beranda';
 import PopupDetailAgenda from '../views/pages/popup-detail';
 import DashboardAdmin from '../views/pages/dashboard-agenda';
 import AdminLogin from '../views/pages/login';
+import PopUpReminder from '../views/pages/reminder';
 
 const routes = {
   '/': Beranda,
@@ -14,6 +15,7 @@ const routes = {
   '/riwayat-agenda': RiwayatAgenda,
   '/tentang': Tentang,
   '/login': AdminLogin,
+  '/reminder': PopUpReminder,
 };
 
 export default routes;

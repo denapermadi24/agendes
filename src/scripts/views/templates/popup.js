@@ -45,7 +45,8 @@ const popupDetailKegiatan = (path) => `
           <p class="content_deskripsi-detail-kegiatan"><span>Jenis Kegiatan: </span>Gotong royong</p>
           <p class="content_deskripsi-detail-kegiatan"><span>Catatan: </span>Bawa alat untuk bersih-bersih</p>
         </section>
-        <button id="ikuti-kegiatan" class="shadow">Ikuti Kegiatan</button>
+        <a href="#/reminder" id="ikuti-kegiatan" class="shadow">Ikuti Kegiatan</a>
+        
       </section>
     </article>
 `;
