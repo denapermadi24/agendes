@@ -15,7 +15,7 @@ const routes = {
   '/riwayat-agenda': RiwayatAgenda,
   '/tentang': Tentang,
   '/login': AdminLogin,
-  '/reminder': PopUpReminder,
+  '/reminder/:id': PopUpReminder,
 };
 
 export default routes;

@@ -15,21 +15,12 @@ const PopUpReminder = {
     async applyDataContent() {
         const url = UrlParser.parseActiveUrlWithoutCombiner();
         const responseJson = await AgendaSource.detailAgenda(url.id);
-        const { data } = responseJson;
+        const data = responseJson.data[0];
         console.log(data);
 
         const popupReminder = document.querySelector('#overlay');
 
-        popupReminder.innerHTML = `${templateReminder()}`;
-
-        // const popup = document.getElementById('popup-detail_container');
-        // const span = document.getElementsByClassName('close')[0];
-
-        // popup.style.display = 'block';
-
-        // span.addEventListener('click', () => {
-        //     popup.style.display = 'none';
-        // });
+        popupReminder.innerHTML = `${templateReminder(data)}`;
     },
 };
 

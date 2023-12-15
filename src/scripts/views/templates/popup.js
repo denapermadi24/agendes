@@ -44,7 +44,7 @@ const popupDetailKegiatan = (path, data) => `
           <p class="content_deskripsi-detail-kegiatan"><span>Jenis Kegiatan: </span>${data.jenis_kegiatan}</p>
           <p class="content_deskripsi-detail-kegiatan"><span>Catatan: </span>${data.tambahan}</p>
         </section>
-        <a href="#/reminder" id="ikuti-kegiatan" class="shadow">Ikuti Kegiatan</a>
+        <a href="#/reminder/${data.id_kegiatan}" id="ikuti-kegiatan" class="shadow">Ikuti Kegiatan</a>
         
       </section>
     </article>
