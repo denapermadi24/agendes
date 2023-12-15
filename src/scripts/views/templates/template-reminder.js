@@ -12,8 +12,6 @@ const templateReminder = (data) => `
 <button type="submit">Aktifkan Reminder</button>
 </form>
 </div>
-`
+`;
 
 export default templateReminder;
-
-//<span class="close-reminder" onclick="closePopup()">&times;</span>

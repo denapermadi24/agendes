@@ -23,8 +23,12 @@ const PopupDetailAgenda = {
     const data = responseJson.data[0];
 
     const popupDetail = document.querySelector('.popup-detail');
-
     popupDetail.innerHTML = `${popupDetailKegiatan(this._myPath, data)}`;
+
+    const btnIkutiKegiatan = document.querySelector('#ikuti-kegiatan');
+    if (this._myPath === '#/riwayat-agenda') {
+      btnIkutiKegiatan.remove();
+    }
 
     const popup = document.getElementById('popup-detail_container');
     const span = document.getElementsByClassName('close')[0];

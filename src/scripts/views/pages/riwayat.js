@@ -1,4 +1,5 @@
 import AgendaSource from '../../data/api-source';
+import PopupDetailAgenda from './popup-detail';
 import showListRiwayat from '../../utils/show-list-riwayat';
 import showListFilteredRiwayat from '../../utils/show-list-filtered-riwayat';
 
@@ -43,6 +44,8 @@ const RiwayatAgenda = {
       // menampilkan list riwayat dari yang terbaru
       showListRiwayat({ agenda, postListRiwayat });
     });
+
+    PopupDetailAgenda.path('#/riwayat-agenda');
 
     const inputSearch = document.querySelector('#search-input-riwayat');
     const btnSearch = document.querySelector('#btn-search-riwayat');
