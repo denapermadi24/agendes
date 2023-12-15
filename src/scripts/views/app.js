@@ -10,11 +10,19 @@ class App {
     try {
       const url = UrlParser.parseActiveUrlWithCombiner();
       const page = routes[url];
-      this._mainContent.innerHTML = await page.renderPageContent();
-      await page.applyDataContent();
-      await page.afterRender();
+
+      if (page) {
+        this._mainContent.innerHTML = await page.renderPageContent();
+        await page.applyDataContent();
+
+        if (typeof page.afterRender === 'function') {
+          await page.afterRender();
+        }
+      } else {
+        this._mainContent.innerHTML = '<h1>404 Not Found</h1>';
+      }
     } catch (error) {
-      console.log(error);
+      console.error('Error rendering page:', error);
     }
   }
 }

@@ -26,16 +26,27 @@ const AdminLogin = {
   },
 
   async applyDataContent() {
-    // Attach the event listener after rendering the page content
     console.log('Applying data content...');
-    document.getElementById('loginButton').addEventListener('click', login);
+
+    // Check authentication status and update navigation menu
+    await updateNavigationMenu();
+
+    // Attach the event listener after rendering the page content
+    const loginButton = document.getElementById('loginButton');
+
+    if (loginButton) {
+      loginButton.addEventListener('click', login);
+    } else {
+      console.error('Login button not found.');
+    }
 
     window.logout = logout;
   },
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   console.log('DOM is fully loaded');
+  await updateNavigationMenu(); // Update navigation menu based on authentication status
   AdminLogin.applyDataContent();
 });
 
@@ -61,6 +72,9 @@ async function login() {
     console.log('Result:', result);
 
     if (result.success) {
+      // Set authentication state in localStorage
+      localStorage.setItem('authToken', result.token);
+
       // Show success message using SweetAlert
       Swal.fire({
         icon: 'success',
@@ -87,11 +101,52 @@ async function login() {
 }
 
 function updateNavigationMenu() {
-  // Update navigation menu after successful login
-  document.getElementById('adminDashboard').innerHTML = '<a class="nav__item" href="#/admin">Dashboard</a>';
-  document.getElementById('adminDashboardFooter').innerHTML = '<a href="#/admin">Dashboard</a>';
-  document.getElementById('admin').innerHTML = '<a class="nav__itemadmn" href="#" onclick="logout()">Logout</a>';
-  document.getElementById('adminFooterLink').innerHTML = '<a href="#" onclick="logout()">Logout</a>';
+  // Check if the user is authenticated
+  const isAuthenticated = localStorage.getItem('authToken') !== null;
+
+  // Update navigation menu based on authentication status
+  const adminDashboardLink = document.getElementById('adminDashboard');
+  const adminDashboardFooterLink = document.getElementById('adminDashboardFooter');
+  const adminLink = document.getElementById('admin');
+  const adminFooterLink = document.getElementById('adminFooterLink');
+
+  if (isAuthenticated) {
+    // User is authenticated
+    adminDashboardLink.innerHTML = '<a class="nav__item" href="#/admin">Dashboard</a>';
+    adminDashboardFooterLink.innerHTML = '<a href="#/admin">Dashboard</a>';
+
+    if (adminLink) {
+      adminLink.innerHTML = '<a class="nav__itemadmn" href="#">Logout</a>';
+      if (typeof logout === 'function') {
+        adminLink.addEventListener('click', logout);
+      }
+    }
+
+    if (adminFooterLink) {
+      adminFooterLink.innerHTML = '<a href="#">Logout</a>';
+      if (typeof logout === 'function') {
+        adminFooterLink.addEventListener('click', logout);
+      }
+    }
+  } else {
+    // User is not authenticated
+    adminDashboardLink.innerHTML = '<a class="nav__item" href="#/">Beranda</a>';
+    adminDashboardFooterLink.innerHTML = '<a href="#/">Beranda</a>';
+
+    if (adminLink) {
+      adminLink.innerHTML = '<a class="nav__itemadmn" href="#/login">Admin</a>';
+      if (typeof login === 'function') {
+        adminLink.removeEventListener('click', logout);
+      }
+    }
+
+    if (adminFooterLink) {
+      adminFooterLink.innerHTML = '<a href="#/Login">Admin</a>';
+      if (typeof login === 'function') {
+        adminFooterLink.removeEventListener('click', logout);
+      }
+    }
+  }
 }
 
 async function logout() {
@@ -99,11 +154,11 @@ async function logout() {
     // Perform logout actions
     // For example, clear any user session data
 
+    // Clear authentication state in localStorage
+    localStorage.removeItem('authToken');
+
     // Update navigation menu after logout
-    document.getElementById('adminDashboard').innerHTML = '<a class="nav__item" href="#/">Beranda</a>';
-    document.getElementById('adminDashboardFooter').innerHTML = '<a href="#/">Beranda</a>'; // You may want to clear the footer link as well
-    document.getElementById('admin').innerHTML = '<a class="nav__itemadmn" href="#/login">Admin</a>';
-    document.getElementById('adminFooterLink').innerHTML = '<a href="#/Login">Admin</a>'; // You may want to clear the footer link as well
+    updateNavigationMenu();
 
     // Show success message using SweetAlert
     Swal.fire({

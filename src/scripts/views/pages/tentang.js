@@ -51,7 +51,7 @@ const Tentang = {
             <img class="icon_team" src="test.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
-            <a href="#" class="medsos"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.instagram.com/jaalalln/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/jalal-ludin-a0a70b262/" class="medsos" target="_blank"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
@@ -69,8 +69,8 @@ const Tentang = {
             <img class="icon_team" src="test.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
-            <a href="#" class="medsos"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="medsos"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/t.laluridho/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/lalu-ridho-taufikurahman-6001a8239/" class="medsos" target="_blank"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
         <div class="nama_team">
@@ -87,8 +87,8 @@ const Tentang = {
             <img class="icon_team" src="test.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
-            <a href="#" class="medsos"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="medsos"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/febrianhaekal1/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/mfebrian-haekal/" class="medsos" target="_blank"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
         <div class="nama_team">
@@ -105,8 +105,8 @@ const Tentang = {
             <img class="icon_team" src="test.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
-            <a href="#" class="medsos"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="medsos"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/ameldvsya/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="medsos" target="_blank"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
         <div class="nama_team">
@@ -123,8 +123,8 @@ const Tentang = {
             <img class="icon_team" src="test.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
-            <a href="#" class="medsos"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="medsos"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/dnaprmdi/" class="medsos"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/dena-indiarto-permadi-74436126a/" class="medsos"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
         <div class="nama_team">
