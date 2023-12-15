@@ -100,7 +100,7 @@
 
 /* popUp Reminder */
 
-.overlay {
+#overlay {
   position: fixed;
   z-index: 999;
   left: 0;
