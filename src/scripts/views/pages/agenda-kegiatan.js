@@ -37,11 +37,13 @@ const AgendaKegiatan = {
 
   async applyDataContent() {
     const listAgenda = await AgendaSource.listAgenda();
-    console.log(listAgenda);
+    listAgenda.reverse();
     const postListAgenda = document.querySelector('.list-agenda-kegiatan');
 
     listAgenda.forEach((agenda) => {
       const waktuKegiatan = new Date(agenda.waktu);
+      // Mengatur waktu agar sama dengan inputan user
+      waktuKegiatan.setMinutes(waktuKegiatan.getMinutes() + waktuKegiatan.getTimezoneOffset());
 
       const date = FormatDateTime.formatDate.format(waktuKegiatan);
       const time = FormatDateTime.formatTime.format(waktuKegiatan);

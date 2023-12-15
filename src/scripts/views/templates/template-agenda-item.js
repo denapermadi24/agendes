@@ -3,7 +3,7 @@ const CreateAgendaItem = {
   <article class="item-agenda-kegiatan shadow">
     <img src="${agenda.foto_kegiatan}" class="list-img-agenda-kegiatan" alt="gambar list agenda">
     <section class="item-riwayat-article">
-      <a href="#/detail-kegiatan/${agenda.id_kegiatan}">
+      <a href="#/detail-kegiatan/${agenda.id_kegiatan}" class="nama_kegiatan">
         <h3>${agenda.nama_kegiatan}</h3>
       </a>
       <section class="content-riwayat-article">

@@ -20,12 +20,11 @@ const PopupDetailAgenda = {
   async applyDataContent() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const responseJson = await AgendaSource.detailAgenda(url.id);
-    const { data } = responseJson;
-    console.log(data[0])
+    const data = responseJson.data[0];
 
     const popupDetail = document.querySelector('.popup-detail');
 
-    popupDetail.innerHTML = `${popupDetailKegiatan(this._myPath, data[0])}`;
+    popupDetail.innerHTML = `${popupDetailKegiatan(this._myPath, data)}`;
 
     const popup = document.getElementById('popup-detail_container');
     const span = document.getElementsByClassName('close')[0];
