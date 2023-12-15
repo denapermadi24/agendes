@@ -37,11 +37,19 @@ const AgendaKegiatan = {
 
   async applyDataContent() {
     const listAgenda = await AgendaSource.listAgenda();
-    console.log(listAgenda);
+    listAgenda.reverse();
     const postListAgenda = document.querySelector('.list-agenda-kegiatan');
 
     listAgenda.forEach((agenda) => {
       const waktuKegiatan = new Date(agenda.waktu);
+      // waktuKegiatan.setMinutes(waktuKegiatan.getMinutes() + waktuKegiatan.getTimezoneOffset());
+      // const today = new Date();
+      // const test = waktuKegiatan.toUTCString();
+      // console.log('================');
+      // console.log(agenda.waktu);
+      // console.log(waktuKegiatan);
+      // console.log(today);
+      // console.log(test);
 
       const date = FormatDateTime.formatDate.format(waktuKegiatan);
       const time = FormatDateTime.formatTime.format(waktuKegiatan);

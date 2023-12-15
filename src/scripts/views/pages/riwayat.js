@@ -36,6 +36,7 @@ const RiwayatAgenda = {
 
   async applyDataContent() {
     const listAgenda = await AgendaSource.listAgenda();
+    listAgenda.reverse();
     const listRiwayatKegiatan = document.querySelector('.list-riwayat-kegiatan');
 
     listAgenda.forEach((agenda) => {

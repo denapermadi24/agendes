@@ -498,7 +498,13 @@ hr {
 }
 
 .item-riwayat-article {
+  overflow: hidden;
   padding: 20px;
+}
+
+.nama_kegiatan {
+  overflow: hidden;
+  display: block;
 }
 
 .content-riwayat-article {
@@ -544,6 +550,11 @@ hr {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0 25px;
 }
+
+/* .nama_kegiatan {
+  height: 100px;
+  width: 100%;
+} */
 
 .desc-kegiatan {
   overflow: hidden;
