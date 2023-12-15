@@ -139,7 +139,7 @@
   background-color: #b30d0d;
 }
 
-form {
+/* form {
   display: flex;
   flex-direction: column;
 }
@@ -153,7 +153,7 @@ input {
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
+} */
 
 /* button {
   padding: 10px;
