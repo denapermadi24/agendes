@@ -30,10 +30,6 @@ const DashboardAdmin = {
                 <input id="nama-kegiatan" type="text" required>
               </div>
               <div class="input">
-                <label for="deskripsi-kegiatan">Deskripsi Kegiatan</label>
-                <input id="deskripsi-kegiatan" type="text" required>
-              </div>
-              <div class="input">
                 <label for="tempat">Tempat Kegiatan</label>
                 <input id="tempat" type="text" required>
               </div>
@@ -54,6 +50,10 @@ const DashboardAdmin = {
               <div class="input">
                 <label for="waktu">Waktu Kegiatan</label>
                 <input id="waktu" type="time" required>
+              </div>
+              <div class="input">
+                <label for="deskripsi-kegiatan">Deskripsi Kegiatan</label>
+                <textarea id="deskripsi-kegiatan" rows="2" placeholder="Tuliskan deskripsi kegiatan Anda di sini!" maxlength="160" required></textarea>
               </div>
               <div class="input input-img_kegiatan">
                 <label for="img-kegiatan">Gambar Kegiatan</label>
@@ -101,7 +101,7 @@ const DashboardAdmin = {
     </div>
   `;
   },
-
+  // <input id="deskripsi-kegiatan" type="testarea" required>
   async applyDataContent() {
     // Add event listener for form submission
     const form = document.getElementById('input-kegiatan');

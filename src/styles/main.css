@@ -499,7 +499,7 @@ hr {
 
 .item-riwayat-article {
   overflow: hidden;
-  padding: 20px;
+  padding: 30px 20px 20px;
 }
 
 .nama_kegiatan {
@@ -551,11 +551,6 @@ hr {
   gap: 0 25px;
 }
 
-/* .nama_kegiatan {
-  height: 100px;
-  width: 100%;
-} */
-
 .desc-kegiatan {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -580,6 +575,11 @@ hr {
   flex-direction: column;
   gap: 10px;
   color: #555555;
+}
+
+#deskripsi-kegiatan {
+  padding: 7px;
+  width: 100%;
 }
 
 /* footer */

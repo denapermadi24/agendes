@@ -16,8 +16,8 @@ const AgendaKegiatan = {
           <p>AgenDes dilengkapi dengan fitur pencarian histori dan detail kegiatan yang memudahkan Anda dalam pencatatan
             riwayat dan evaluasi untuk kegiatan selanjutnya.
           </p>
-          <input type="search" class="search-input" placeholder="Nama / tanggal kegiatan">
-          <button class="btn-search">Cari</button>
+          <input type="search" id="search-input-agenda" class="search-input" placeholder="Nama / tanggal kegiatan">
+          <button id="btn-search-agenda" class="btn-search">Cari</button>
         </div>
       </div>
     </div>
@@ -47,11 +47,10 @@ const AgendaKegiatan = {
 
     PopupDetailAgenda.path('#/agenda-kegiatan');
 
-    const inputSearch = document.querySelector('.search-input');
-    const btnSearch = document.querySelector('.btn-search');
+    const inputSearch = document.querySelector('#search-input-agenda');
+    const btnSearch = document.querySelector('#btn-search-agenda');
 
     const filterData = (search) => {
-      console.log(!search);
       if (!search) {
         postListAgenda.innerHTML = '';
         latestListAgenda.forEach((agenda) => {

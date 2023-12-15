@@ -11,6 +11,7 @@ const showListAgenda = ({ agenda, postListAgenda }) => {
   const time = FormatDateTime.formatTime.format(waktuKegiatan);
   const elementPostListAgenda = postListAgenda;
 
+  // Mengecek dan menampilkan item list yang tanggal, bulan dan tahun kegiatan > saat ini
   if (waktuKegiatan.getFullYear() >= getToday.yearToday) {
     if (waktuKegiatan.getFullYear() > getToday.yearToday) {
       elementPostListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
