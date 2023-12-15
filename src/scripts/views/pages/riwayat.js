@@ -41,6 +41,8 @@ const RiwayatAgenda = {
 
     listAgenda.forEach((agenda) => {
       const waktuKegiatan = new Date(agenda.waktu);
+      // Mengatur waktu agar sama dengan inputan user
+      waktuKegiatan.setMinutes(waktuKegiatan.getMinutes() + waktuKegiatan.getTimezoneOffset());
 
       const date = FormatDateTime.formatDate.format(waktuKegiatan);
       const time = FormatDateTime.formatTime.format(waktuKegiatan);
@@ -51,7 +53,7 @@ const RiwayatAgenda = {
         } else if (waktuKegiatan.getMonth() + 1 <= getToday.monthToday) {
           if (waktuKegiatan.getMonth() + 1 < getToday.monthToday) {
             listRiwayatKegiatan.innerHTML += `${CreateAgendaItem.riwayatAgendaItemCard({ agenda, date, time })}`;
-          } else if (waktuKegiatan.getDate() <= getToday.dateToday) {
+          } else if (waktuKegiatan.getDate() < getToday.dateToday) {
             listRiwayatKegiatan.innerHTML += `${CreateAgendaItem.riwayatAgendaItemCard({ agenda, date, time })}`;
           }
         }

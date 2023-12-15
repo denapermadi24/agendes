@@ -42,14 +42,8 @@ const AgendaKegiatan = {
 
     listAgenda.forEach((agenda) => {
       const waktuKegiatan = new Date(agenda.waktu);
-      // waktuKegiatan.setMinutes(waktuKegiatan.getMinutes() + waktuKegiatan.getTimezoneOffset());
-      // const today = new Date();
-      // const test = waktuKegiatan.toUTCString();
-      // console.log('================');
-      // console.log(agenda.waktu);
-      // console.log(waktuKegiatan);
-      // console.log(today);
-      // console.log(test);
+      // Mengatur waktu agar sama dengan inputan user
+      waktuKegiatan.setMinutes(waktuKegiatan.getMinutes() + waktuKegiatan.getTimezoneOffset());
 
       const date = FormatDateTime.formatDate.format(waktuKegiatan);
       const time = FormatDateTime.formatTime.format(waktuKegiatan);
