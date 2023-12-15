@@ -1,4 +1,4 @@
-import popupDetailKegiatan from '../templates/popup';
+// import popupDetailKegiatan from '../templates/popup';
 import UrlParser from '../../routes/url-parser';
 import AgendaSource from '../../data/api-source';
 import templateReminder from '../templates/template-reminder';
@@ -8,8 +8,7 @@ const PopUpReminder = {
         return `
     <div class="popup-detail" id="overlay">
     
-    </div>
-      `;
+    </div>`;
     },
 
     async applyDataContent() {

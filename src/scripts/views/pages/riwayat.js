@@ -36,10 +36,11 @@ const RiwayatAgenda = {
 
   async applyDataContent() {
     const listAgenda = await AgendaSource.listAgenda();
-    listAgenda.reverse();
+    // list agenda dari yang terbaru
+    const latestListAgenda = [...listAgenda].reverse();
     const listRiwayatKegiatan = document.querySelector('.list-riwayat-kegiatan');
 
-    listAgenda.forEach((agenda) => {
+    latestListAgenda.forEach((agenda) => {
       const waktuKegiatan = new Date(agenda.waktu);
       // Mengatur waktu agar sama dengan inputan user
       waktuKegiatan.setMinutes(waktuKegiatan.getMinutes() + waktuKegiatan.getTimezoneOffset());

@@ -1,8 +1,7 @@
 import PopupDetailAgenda from './popup-detail';
 import AgendaSource from '../../data/api-source';
-import CreateAgendaItem from '../templates/template-agenda-item';
-import FormatDateTime from '../../utils/format-date-time';
-import getToday from '../../utils/time-today';
+import showListAgenda from '../../utils/show-list-agenda';
+import showListFilteredAgenda from '../../utils/show-list-filtered-agenda';
 
 const AgendaKegiatan = {
   async renderPageContent() {
@@ -37,28 +36,40 @@ const AgendaKegiatan = {
 
   async applyDataContent() {
     const listAgenda = await AgendaSource.listAgenda();
-    listAgenda.reverse();
+    // list agenda dari yang terbaru
+    const latestListAgenda = [...listAgenda].reverse();
     const postListAgenda = document.querySelector('.list-agenda-kegiatan');
 
-    listAgenda.forEach((agenda) => {
-      const waktuKegiatan = new Date(agenda.waktu);
-      // Mengatur waktu agar sama dengan inputan user
-      waktuKegiatan.setMinutes(waktuKegiatan.getMinutes() + waktuKegiatan.getTimezoneOffset());
-
-      const date = FormatDateTime.formatDate.format(waktuKegiatan);
-      const time = FormatDateTime.formatTime.format(waktuKegiatan);
-
-      if (waktuKegiatan.getFullYear() >= getToday.yearToday) {
-        if (waktuKegiatan.getFullYear() > getToday.yearToday) {
-          postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
-        } else if (waktuKegiatan.getMonth() + 1 >= getToday.monthToday
-          && waktuKegiatan.getDate() >= getToday.dateToday) {
-          postListAgenda.innerHTML += `${CreateAgendaItem.agendaItemCard({ agenda, date, time })}`;
-        }
-      }
+    latestListAgenda.forEach((agenda) => {
+      // menampilkan list agenda dari yang terbaru
+      showListAgenda({ agenda, postListAgenda });
     });
 
     PopupDetailAgenda.path('#/agenda-kegiatan');
+
+    const inputSearch = document.querySelector('.search-input');
+    const btnSearch = document.querySelector('.btn-search');
+
+    const filterData = (search) => {
+      console.log(!search);
+      if (!search) {
+        postListAgenda.innerHTML = '';
+        latestListAgenda.forEach((agenda) => {
+          // menampilkan list agenda dari yang terbaru
+          showListAgenda({ agenda, postListAgenda });
+        });
+      }
+    };
+
+    inputSearch.addEventListener('input', (e) => filterData(e.target.value));
+
+    btnSearch.addEventListener('click', () => {
+      postListAgenda.innerHTML = '';
+      latestListAgenda.forEach((agenda) => {
+        // menampilkan list agenda dari hasil pencarian
+        showListFilteredAgenda({ agenda, inputSearch, postListAgenda });
+      });
+    });
   },
 };
 
