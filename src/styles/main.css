@@ -722,6 +722,22 @@ footer {
   text-align: center;
 }
 
+#submit-kegiatan,
+#ikuti-kegiatan,
+#submit-reminder {
+  background-color: #fbbc26;
+  color: #2c79c6;
+  font-weight: 600;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  height: 44px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 8px;
+  cursor: pointer;
+}
+
 .input_section>form>.input>input,
 .input_section>form>.input>select,
 .input_reminder>form>.input>input,
