@@ -144,7 +144,7 @@ const DashboardAdmin = {
       formData.append('tempat_kegiatan', `${inputTempat.value}`);
       formData.append('jenis_kegiatan', `${inputJenis.value}`);
       formData.append('waktu', `${inputTanggal.value} ${inputWaktu.value}`);
-      //formData.append('tambahan', 'test');
+      formData.append('tambahan', 'test');
       formData.append('foto_kegiatan', inputGambar.files[0]);
 
       try {
