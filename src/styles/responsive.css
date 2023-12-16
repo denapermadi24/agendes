@@ -374,6 +374,10 @@
   }
 
   .popup-reminder-content {
+    margin: 20% auto;
+  }
+
+  .popup-reminder-content {
     width: 75%;
   }
 }
@@ -390,6 +394,10 @@
 }
 
 @media screen and (max-width: 450px) {
+  .popup-reminder-content {
+    margin: 30% auto;
+  }
+
   .popup-reminder-content {
     width: 87%;
   }
