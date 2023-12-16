@@ -23,7 +23,8 @@ const PopUpReminder = {
 
       // Add event listener for the button
       const submitButton = document.getElementById('submit-reminder');
-      submitButton.addEventListener('click', () => {
+      submitButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default form submission
         saveReminder(data);
       });
     } else {
