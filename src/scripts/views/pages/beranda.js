@@ -96,8 +96,7 @@ const Beranda = {
               <p>
                  Agendes berperan sebagai pusat informasi yang menyajikan segala hal yang berkaitan dengan kegiatan desa.
                  Dengan adanya fitur kalender dan fitur notifikasi real-time memastikan bahwa setiap perubahan atau tambahan
-                 nformasi segera diketahui oleh masyarakat. Ini menciptakan lingkungan informasional yang dinamis dan 
-                 memungkinkan warga desa untuk tetap terhubung dengan perkembangan terkini di lingkungan mereka..
+                 informasi segera diketahui oleh masyarakat. 
               </p>
             </div>
           </div>
@@ -108,11 +107,9 @@ const Beranda = {
             </div>
             <div class="deskripsi_layanan">
               <p>
-                 Agendes membawa efisiensi dalam pendaftaran dan pengelolaan kegiatan desa.
                  Proses pendaftaran yang mudah dan dilakukan secara daring meminimalkan kerumitan administratif. 
-                 Warga desa dapat dengan cepat mendaftarkan kegiatan atau usulan mereka tanpa perlu melewati proses yang rumit.
                  Hal ini tidak hanya mempercepat proses persetujuan, tetapi juga mengurangi hambatan administratif yang
-                 mungkin menghambat partisipasi masyarakat..
+                 mungkin menghambat partisipasi masyarakat.
               </p>
             </div>
           </div>
@@ -123,11 +120,8 @@ const Beranda = {
             </div>
             <div class="deskripsi_layanan">
               <p>
-                 Salah satu kunci keberhasilan Agendes adalah antarmuka pengguna yang ramah dan mudah digunakan. 
-                 Meskipun berbasis teknologi, Agendes dirancang untuk dapat diakses oleh semua kalangan masyarakat,
-                 termasuk mereka yang tidak terbiasa dengan teknologi informasi. 
-                 Desain yang responsif dan navigasi yang intuitif memastikan bahwa setiap warga dapat dengan mudah 
-                 mengakses informasi dan berpartisipasi dalam kegiatan desa..
+                 Agendes dirancang untuk dapat diakses oleh semua kalangan masyarakat. Desain yang responsif dan navigasi yang 
+                 intuitif memastikan bahwa setiap warga dapat dengan mudah mengakses informasi dan berpartisipasi dalam kegiatan desa.
               </p>
             </div>
           </div>
