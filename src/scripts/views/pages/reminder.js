@@ -75,7 +75,7 @@ async function saveReminder(data) {
       Swal.fire({
         icon: 'success',
         title: 'Success',
-        text: 'Reminder saved successfully',
+        text: 'Email Anda Telah Terkirim',
       });
     } else {
       // Show error message with SweetAlert2
