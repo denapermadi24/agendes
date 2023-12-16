@@ -10,8 +10,8 @@ const DashboardAdmin = {
           <p>Jadikan setiap kegiatan desa lebih terkoordinasi dan terstruktur. Mari membangun desa anda dan wujudkan
             solidaritas bersama AgenDes. Yuk gunakan AgenDes sekarang!
           </p>
-          <a class="exchange_button" href="#/agenda">
-            Tambah Agenda
+          <a class="exchange_button" href="#/agenda-kegiatan">
+            Cek Agenda
           </a>
         </div>
       </div>
