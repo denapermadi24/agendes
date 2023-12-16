@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log('DOM is fully loaded');
   await updateNavigationMenu(); // Update navigation menu based on authentication status
   AdminLogin.applyDataContent();
+
+  // Add an event listener for the beforeunload event
+  window.addEventListener('beforeunload', () => {
+    console.log('Page is closing. Clearing login session...');
+    clearLoginSession();
+  });
 });
 
 async function login() {
@@ -177,6 +183,15 @@ async function logout() {
       text: 'An error occurred during logout. Please try again.',
     });
     console.error('Error during logout:', error.message);
+  }
+}
+
+function clearLoginSession() {
+  try {
+    // Clear authentication state in localStorage
+    localStorage.removeItem('authToken');
+  } catch (error) {
+    console.error('Error clearing login session:', error.message);
   }
 }
 
