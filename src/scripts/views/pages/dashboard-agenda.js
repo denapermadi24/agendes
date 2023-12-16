@@ -1,3 +1,5 @@
+import AgendaSource from '../../data/api-source';
+
 const DashboardAdmin = {
   async renderPageContent() {
     return `
@@ -101,8 +103,20 @@ const DashboardAdmin = {
     </div>
   `;
   },
-  // <input id="deskripsi-kegiatan" type="testarea" required>
+
   async applyDataContent() {
+    const listReminder = await AgendaSource.listReminder();
+    console.log(listReminder);
+
+    const specificReminder = await AgendaSource.specificReminder(1);
+    console.log(specificReminder);
+
+    // listReminder.forEach(async (item) => {
+    //   console.log(item.id_reminder);
+    //   console.log(specificReminder);
+    //   console.log(specificReminder.data);
+    // });
+
     // Add event listener for form submission
     const form = document.getElementById('input-kegiatan');
     form.addEventListener('submit', handleFormSubmission);
