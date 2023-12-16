@@ -298,6 +298,10 @@ hr {
   position: center;
 }
 
+.p {
+  margin-right: 100px;
+}
+
 .hero_subtitle {
   color: #f8f8f8;
   padding-top: 30px;
