@@ -68,6 +68,7 @@
 }
 
 @media (max-width: 515px) {
+
   /* Ubah ukuran padding saat lebar layar maksimum 480px */
   .grid-container {
     grid-template-columns: 2fr 2fr;
@@ -114,6 +115,7 @@
 }
 
 @media screen and (max-width: 1200px) {
+
   /* Popup Detail Kegiatan */
   .popup-detail-content {
     width: 70%;
@@ -151,6 +153,10 @@
   .desc_hero {
     margin-top: 0;
   }
+
+  .popup-reminder-content {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 855px) {
@@ -177,6 +183,7 @@
 }
 
 @media screen and (max-width: 799px) {
+
   .hero_title,
   .hero_subtitle,
   .exchange_button {
@@ -219,6 +226,7 @@
 }
 
 @media (max-width: 768px) {
+
   .footer-content,
   .social-media,
   .footer-links,
@@ -364,6 +372,10 @@
   .list-agenda-kegiatan {
     grid-template-columns: 1fr;
   }
+
+  .popup-reminder-content {
+    width: 75%;
+  }
 }
 
 @media screen and (min-width: 2100px) {
@@ -374,5 +386,16 @@
 
   .list-agenda-kegiatan {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .popup-reminder-content {
+    width: 87%;
+  }
+
+  .popup-reminder-content>header>h1 {
+    margin-top: 5px;
+    font-size: 18px;
   }
 }

@@ -350,6 +350,7 @@ hr {
 
 .btn-search:active,
 .close:active,
+#submit-remainder:active,
 #submit-kegiatan:active,
 #ikuti-kegiatan:active {
   transform: scale(0.97);
@@ -712,7 +713,8 @@ footer {
   color: #2c79c6;
 }
 
-.input_section>form>.input {
+.input_section>form>.input,
+.input_reminder>form>.input {
   margin: 10px 0;
 }
 
@@ -721,6 +723,7 @@ footer {
 }
 
 #submit-kegiatan,
+#submit-remainder,
 #ikuti-kegiatan {
   background-color: #fbbc26;
   color: #2c79c6;
@@ -736,13 +739,16 @@ footer {
 }
 
 .input_section>form>.input>input,
-select {
+.input_section>form>.input>select,
+.input_reminder>form>.input>input,
+.input_reminder>form>.input>select {
   display: block;
   width: 100%;
   padding: 8px;
 }
 
-.input_section>form>.input>label {
+.input_section>form>.input>label,
+.input_reminder>form>.input>label {
   color: #2c79c6;
   font-weight: bold;
 }

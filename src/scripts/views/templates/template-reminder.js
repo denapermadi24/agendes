@@ -1,17 +1,22 @@
 const templateReminder = (data) => `
-<div class="popup">
-<a href="#/detail-kegiatan/${data.id_kegiatan}" class="close-reminder">&times;</a>
-<h2>Aktifkan Reminder</h2>
-<form id="reminderForm" onsubmit="saveReminder(event)">
-<label for="name">Nama:</label>
-<input type="text" id="name" name="name" required>
-
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" required>
-
-<button type="submit">Aktifkan Reminder</button>
-</form>
-</div>
-`;
+    <article class="popup-reminder-content">
+      <header>
+        <h1>Aktifkan Reminder</h1>
+        <a href="#/detail-kegiatan/${data.id_kegiatan}" class="close">&times;</a>
+      </header>
+      <section class="input_reminder">
+        <form id="reminderForm" onsubmit="saveReminder(event)">
+          <div class="input">
+            <label for="name">Nama</label>
+            <input id="name" type="text" name="name" required>
+          </div>
+          <div class="input">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required>
+          </div>
+          <button id="submit-remainder" class="shadow btn-animation" type="submit">Kirim</button>
+        </form>
+      </section>
+    </article>`;
 
 export default templateReminder;
