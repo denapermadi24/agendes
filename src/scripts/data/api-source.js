@@ -19,6 +19,17 @@ const AgendaSource = {
       return null;
     }
   },
+
+  async listReminder() {
+    try {
+      const response = await fetch('https://agendes-back-end.vercel.app/reminder');
+      const responseJson = await response.json();
+      return responseJson;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
 };
 
 export default AgendaSource;
