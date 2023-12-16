@@ -1,6 +1,7 @@
 import popupDetailKegiatan from '../templates/popup';
 import UrlParser from '../../routes/url-parser';
 import AgendaSource from '../../data/api-source';
+import FormatDateTime from '../../utils/format-date-time';
 
 const PopupDetailAgenda = {
   _myPath: '',
@@ -22,8 +23,15 @@ const PopupDetailAgenda = {
     const responseJson = await AgendaSource.detailAgenda(url.id);
     const data = responseJson.data[0];
 
+    const waktuKegiatan = new Date(data.waktu);
+  // Mengatur waktu agar sama dengan inputan user
+  waktuKegiatan.setMinutes(waktuKegiatan.getMinutes() + waktuKegiatan.getTimezoneOffset());
+  const date = FormatDateTime.formatDate.format(waktuKegiatan);
+  const time = FormatDateTime.formatTime.format(waktuKegiatan);
+
     const popupDetail = document.querySelector('.popup-detail');
-    popupDetail.innerHTML = `${popupDetailKegiatan(this._myPath, data)}`;
+    let myPath = this._myPath;
+    popupDetail.innerHTML = `${popupDetailKegiatan({myPath, data, date,time})}`;
 
     const btnIkutiKegiatan = document.querySelector('#ikuti-kegiatan');
     if (this._myPath === '#/riwayat-agenda') {
