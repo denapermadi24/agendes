@@ -14,7 +14,7 @@ const templateReminder = (data) => `
             <label for="email">Email</label>
             <input id="email" type="email" name="email" required>
           </div>
-          <button id="submit-remainder" class="shadow btn-animation" type="submit">Kirim</button>
+          <button id="submit-reminder" class="shadow btn-animation" type="submit">Kirim</button>
         </form>
       </section>
     </article>`;
