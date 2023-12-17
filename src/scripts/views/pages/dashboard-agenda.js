@@ -69,16 +69,6 @@ const DashboardAdmin = {
             </section>
           </div>
         </div>
-
-        <article class="container_reminder shadow">
-          <section>
-            <h2>Reminder</h2>
-          </section>
-          <article id="container_user-reminder">
-            
-          </article>
-        </article>
-
         <div class="maincontent shadow" id="maincontent">
           <div class="deskripsi_container shadow">
             <div class="tentangkami">
@@ -92,6 +82,16 @@ const DashboardAdmin = {
             </div>
           </div>
         </div>
+        <article class="container_reminder shadow">
+          <section>
+            <h2>Reminder</h2>
+          </section>
+          <article id="container_user-reminder">
+          
+          </article>
+        </article>
+
+        
       </div>
   `;
   },
