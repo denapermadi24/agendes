@@ -1,8 +1,8 @@
 // Import statements here...
+import Swal from 'sweetalert2';
 import UrlParser from '../../routes/url-parser';
 import AgendaSource from '../../data/api-source';
 import templateReminder from '../templates/template-reminder';
-import Swal from 'sweetalert2';
 
 const PopUpReminder = {
   async renderPageContent() {
@@ -23,9 +23,9 @@ const PopUpReminder = {
 
       // Add event listener for the button
       const submitButton = document.getElementById('submit-reminder');
-      submitButton.addEventListener('click', (event) => {
+      submitButton.addEventListener('click', async (event) => {
         event.preventDefault(); // Prevent the default form submission
-        saveReminder(data);
+        await saveReminder();
       });
     } else {
       console.error('Error: Could not find the overlay element');
@@ -34,7 +34,8 @@ const PopUpReminder = {
 };
 
 // Function to save the reminder data
-async function saveReminder(data) {
+async function saveReminder() {
+  const url = UrlParser.parseActiveUrlWithoutCombiner();
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
 
@@ -54,37 +55,77 @@ async function saveReminder(data) {
   }
 
   // Prepare data for the POST request
-  const reminderData = {
-    nama_user: name,
-    email_user: email,
+  const postReminderData = {
+    postToUser: {
+      nama_user: name,
+      email_user: email,
+    },
   };
 
   try {
     // Log the payload before sending the request
-    console.log('POST Request Payload:', JSON.stringify(reminderData));
+    console.log('POST Request Payload:', JSON.stringify(postReminderData.postToUser));
 
     const response = await fetch('https://agendes-back-end.vercel.app/reminder', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(reminderData),
+      body: JSON.stringify(postReminderData.postToUser),
     });
+    console.log('====== User Reminder =======');
+    console.log(response);
 
-    if (response.ok) {
-      // Show success message with SweetAlert2
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: 'Email Anda Telah Terkirim',
-      });
-    } else {
-      // Show error message with SweetAlert2
+    const responseEmail = await fetch(`https://agendes-back-end.vercel.app/reminder-byemail/${email}`);
+    const responseJsonEmail = await responseEmail.json();
+    const dataUserEmail = responseJsonEmail.data;
+
+    const listReminder = await AgendaSource.listReminder();
+
+    // Memeriksa inputan user dengan data API list Reminder apakah
+    // sudah ada orang dengan nama, email dan id kegiatan yg sama
+    const cekPendaftaran = listReminder.find((item) => item.nama_user.toLowerCase()
+      === name.toLowerCase() && item.email_user.toLowerCase()
+      === email.toLowerCase() && item.id_kegiatan === parseInt(url.id, 10));
+
+    // Memeriksa inputan user dengan data API list User Reminder apakah
+    // sudah ada orang dengan nama, email dan id kegiatan yg sama
+    const cekEmailPendaftar = dataUserEmail.find((user) => user.nama_user.toLowerCase()
+      === name.toLowerCase() && user.email_user.toLowerCase() === email.toLowerCase());
+
+    if (cekPendaftaran) {
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Failed to save reminder',
+        text: 'Anda sudah terdaftar pada kegiatan ini!',
       });
+    } else {
+      const responsePostReminder = await fetch('https://agendes-back-end.vercel.app/reminder-user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id_kegiatan: parseInt(url.id, 10),
+          id_reminder: cekEmailPendaftar.id_reminder,
+        }),
+      });
+
+      if (responsePostReminder.ok) {
+        // Show success message with SweetAlert2
+        Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Anda berhasil mendaftar pada kegiatan ini!',
+        });
+      } else {
+        // Show error message with SweetAlert2
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Server Error, Anda gagal mendaftar pada kegiatan ini!',
+        });
+      }
     }
   } catch (error) {
     // Show error message with SweetAlert2

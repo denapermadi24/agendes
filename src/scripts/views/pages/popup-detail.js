@@ -34,7 +34,7 @@ const PopupDetailAgenda = {
     popupDetail.innerHTML = `${popupDetailKegiatan(this._myPath, { data, date, time })}`;
 
     const btnIkutiKegiatan = document.querySelector('#ikuti-kegiatan');
-    if (this._myPath === '#/riwayat-agenda') {
+    if (this._myPath === '#/riwayat-agenda' || this._myPath === '#/admin') {
       btnIkutiKegiatan.remove();
     }
 

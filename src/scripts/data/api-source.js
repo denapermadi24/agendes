@@ -22,7 +22,7 @@ const AgendaSource = {
 
   async listReminder() {
     try {
-      const response = await fetch('https://agendes-back-end.vercel.app/reminder');
+      const response = await fetch('https://agendes-back-end.vercel.app/reminder-user');
       const responseJson = await response.json();
       return responseJson.data;
     } catch (error) {

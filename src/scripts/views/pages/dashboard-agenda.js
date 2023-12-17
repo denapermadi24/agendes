@@ -1,4 +1,6 @@
 import AgendaSource from '../../data/api-source';
+import TemplateUserReminder from '../templates/template-user-reminder';
+import PopupDetailAgenda from './popup-detail';
 
 const DashboardAdmin = {
   async renderPageContent() {
@@ -72,39 +74,8 @@ const DashboardAdmin = {
           <section>
             <h2>Reminder</h2>
           </section>
-          <article>
-            <section class="user-reminder shadow">
-              <h3>nama</h3>
-              <p>email</p>
-            </section>
-            <section class="user-reminder shadow">
-              <h3>nama</h3>
-              <p>email</p>
-            </section>
-            <section class="user-reminder shadow">
-              <h3>nama</h3>
-              <p>email</p>
-            </section>
-            <section class="user-reminder shadow">
-              <h3>nama</h3>
-              <p>email</p>
-            </section>
-            <section class="user-reminder shadow">
-              <h3>nama</h3>
-              <p>email</p>
-            </section>
-            <section class="user-reminder shadow">
-              <h3>nama</h3>
-              <p>email</p>
-            </section>
-            <section class="user-reminder shadow">
-              <h3>nama</h3>
-              <p>email</p>
-            </section>
-            <section class="user-reminder shadow">
-              <h3>nama</h3>
-              <p>email</p>
-            </section>
+          <article id="container_user-reminder">
+            
           </article>
         </article>
 
@@ -127,16 +98,15 @@ const DashboardAdmin = {
 
   async applyDataContent() {
     const listReminder = await AgendaSource.listReminder();
-    console.log(listReminder);
+    const latestListReminder = [...listReminder].reverse();
 
-    const specificReminder = await AgendaSource.specificReminder(1);
-    console.log(specificReminder);
+    const containerUserReminder = document.getElementById('container_user-reminder');
 
-    // listReminder.forEach(async (item) => {
-    //   console.log(item.id_reminder);
-    //   console.log(specificReminder);
-    //   console.log(specificReminder.data);
-    // });
+    latestListReminder.forEach((user) => {
+      containerUserReminder.innerHTML += `${TemplateUserReminder(user)}`;
+    });
+
+    PopupDetailAgenda.path('#/admin');
 
     // Add event listener for form submission
     const form = document.getElementById('input-kegiatan');
