@@ -672,16 +672,11 @@ footer {
 
 .rectangle {
   width: 60%;
-  /* Sesuaikan lebar sesuai kebutuhan Anda */
   height: 300px;
-  /* Sesuaikan tinggi sesuai kebutuhan Anda */
   background-color: #afb5b9;
-  /* Sesuaikan warna sesuai keinginan Anda */
   color: #fff;
-  /* Sesuaikan warna teks sesuai keinginan Anda */
   text-align: center;
   line-height: 200px;
-  /* Sesuaikan tinggi sesuai kebutuhan Anda */
   margin: auto;
   display: flex;
   border-radius: 8px;
