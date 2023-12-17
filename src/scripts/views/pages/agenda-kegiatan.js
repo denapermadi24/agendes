@@ -36,7 +36,7 @@ const AgendaKegiatan = {
 
   async applyDataContent() {
     const listAgenda = await AgendaSource.listAgenda();
-    console.log(listAgenda);
+
     // list agenda dari yang terbaru
     const latestListAgenda = [...listAgenda].reverse();
     const postListAgenda = document.querySelector('.list-agenda-kegiatan');

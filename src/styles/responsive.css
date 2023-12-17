@@ -216,10 +216,6 @@
   .layanan {
     margin-bottom: 40px;
   }
-
-  .container_reminder>article {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -412,8 +408,9 @@
   }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 650px) {
   .container_reminder>article {
     grid-template-columns: 1fr;
+    padding: 20px 0;
   }
 }

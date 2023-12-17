@@ -774,7 +774,7 @@ footer {
 
 .container_reminder>article {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 15px;
   padding: 20px;
 }
@@ -783,6 +783,15 @@ footer {
   color: #555555;
   border-radius: 10px;
   padding: 10px;
+}
+
+.container_reminder>article>.user-reminder>a {
+  color: #2c79c6;
+  margin-bottom: 3px;
+}
+
+.container_reminder>article>.user-reminder>.name-user {
+  font-weight: bold;
 }
 
 .main-content-container {
