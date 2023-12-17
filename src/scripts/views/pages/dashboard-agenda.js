@@ -45,6 +45,7 @@ const DashboardAdmin = {
                     <option value="Posyandu">Posyandu</option>
                     <option value="Kesehatan">Kesehatan</option>
                     <option value="Lomba">Lomba</option>
+                    <option value="Bantuan">Bantuan</option>
                   </select>
                 </div>
                 <div class="input">
