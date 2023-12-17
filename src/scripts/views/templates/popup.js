@@ -1,8 +1,8 @@
-const popupDetailKegiatan = ({myPath, data, date,time}) => `
+const popupDetailKegiatan = (path, { data, date, time }) => `
     <article class="popup-detail-content">
       <header>
         <h1>Detail Kegiatan</h1>
-        <a href="${myPath}" class="close">&times;</a>
+        <a href="${path}" class="close">&times;</a>
       </header>
       <section class="content-detail">
         <section class="profile-detail-kegiatan">

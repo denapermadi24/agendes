@@ -21,86 +21,107 @@ const DashboardAdmin = {
     </div>
 
     <div class="main-content-container">
-    <div class="container-post-kegiatan">
-      <div class="post-kegiatan">
-        <div class="form-post-kegiatan">
-          <section class="input_section shadow">
-            <h2>Post Kegiatan</h2>
-            <form id="input-kegiatan">
-              <div class="input">
-                <label for="nama-kegiatan">Nama Kegiatan</label>
-                <input id="nama-kegiatan" type="text" required>
-              </div>
-              <div class="input">
-                <label for="tempat">Tempat Kegiatan</label>
-                <input id="tempat" type="text" required>
-              </div>
-              <div class="input">
-              <label for="option-kegiatan">Jenis Kegiatan</label>
-                <select id="option-kegiatan">
-                  <option value="Gotong Royong">Gotong Royong</option>
-                  <option value="Rapat/Musyawarah">Rapat/Musyawarah</option>
-                  <option value="Posyandu">Posyandu</option>
-                  <option value="Kesehatan">Kesehatan</option>
-                  <option value="Lomba">Lomba</option>
-                </select>
-              </div>
-              <div class="input">
-                <label for="tanggal">Tanggal Kegiatan</label>
-                <input id="tanggal" type="date" required>
-              </div>
-              <div class="input">
-                <label for="waktu">Waktu Kegiatan</label>
-                <input id="waktu" type="time" required>
-              </div>
-              <div class="input">
-                <label for="deskripsi-kegiatan">Deskripsi Kegiatan</label>
-                <textarea id="deskripsi-kegiatan" rows="2" placeholder="Tuliskan deskripsi kegiatan Anda di sini!" maxlength="160" required></textarea>
-              </div>
-              <div class="input input-img_kegiatan">
-                <label for="img-kegiatan">Gambar Kegiatan</label>
-                <input id="img-kegiatan" type="file" accept="image/*" required>
-              </div>
-              <button id="submit-kegiatan" class="shadow btn-animation" type="submit">SUBMIT</button>
-            </form>
+      <div class="container-post-kegiatan">
+        <div class="post-kegiatan">
+          <div class="form-post-kegiatan">
+            <section class="input_section shadow">
+              <h2>Post Kegiatan</h2>
+              <form id="input-kegiatan">
+                <div class="input">
+                  <label for="nama-kegiatan">Nama Kegiatan</label>
+                  <input id="nama-kegiatan" type="text" required>
+                </div>
+                <div class="input">
+                  <label for="tempat">Tempat Kegiatan</label>
+                  <input id="tempat" type="text" required>
+                </div>
+                <div class="input">
+                  <label for="option-kegiatan">Jenis Kegiatan</label>
+                  <select id="option-kegiatan">
+                    <option value="Gotong Royong">Gotong Royong</option>
+                    <option value="Rapat/Musyawarah">Rapat/Musyawarah</option>
+                    <option value="Posyandu">Posyandu</option>
+                    <option value="Kesehatan">Kesehatan</option>
+                    <option value="Lomba">Lomba</option>
+                  </select>
+                </div>
+                <div class="input">
+                  <label for="tanggal">Tanggal Kegiatan</label>
+                  <input id="tanggal" type="date" required>
+                </div>
+                <div class="input">
+                  <label for="waktu">Waktu Kegiatan</label>
+                  <input id="waktu" type="time" required>
+                </div>
+                <div class="input">
+                  <label for="deskripsi-kegiatan">Deskripsi Kegiatan</label>
+                  <textarea id="deskripsi-kegiatan" rows="2" placeholder="Tuliskan deskripsi kegiatan Anda di sini!"
+                    maxlength="160" required></textarea>
+                </div>
+                <div class="input input-img_kegiatan">
+                  <label for="img-kegiatan">Gambar Kegiatan</label>
+                  <input id="img-kegiatan" type="file" accept="image/*" required>
+                </div>
+                <button id="submit-kegiatan" class="shadow btn-animation" type="submit">SUBMIT</button>
+              </form>
+            </section>
+          </div>
+        </div>
+
+        <article class="container_reminder shadow">
+          <section>
+            <h2>Reminder</h2>
           </section>
-        </div>
-      </div>
+          <article>
+            <section class="user-reminder shadow">
+              <h3>nama</h3>
+              <p>email</p>
+            </section>
+            <section class="user-reminder shadow">
+              <h3>nama</h3>
+              <p>email</p>
+            </section>
+            <section class="user-reminder shadow">
+              <h3>nama</h3>
+              <p>email</p>
+            </section>
+            <section class="user-reminder shadow">
+              <h3>nama</h3>
+              <p>email</p>
+            </section>
+            <section class="user-reminder shadow">
+              <h3>nama</h3>
+              <p>email</p>
+            </section>
+            <section class="user-reminder shadow">
+              <h3>nama</h3>
+              <p>email</p>
+            </section>
+            <section class="user-reminder shadow">
+              <h3>nama</h3>
+              <p>email</p>
+            </section>
+            <section class="user-reminder shadow">
+              <h3>nama</h3>
+              <p>email</p>
+            </section>
+          </article>
+        </article>
 
-      <div class="maincontent shadow" id="maincontent">
-        <div class="deskripsi_container shadow">
-          <div class="tentangkami">
-            <h2>Perhatian!!!</h2>
-          </div>
-          <div class="deskripsi_paragraf">
-            <p>
-              Setelah anda selesai menambah kegiatan baru, periksalah pada bagian agenda untuk memastikan apakah
-              kegiatan yang baru anda buat telah berhasil tesimpan.
-            </p>
+        <div class="maincontent shadow" id="maincontent">
+          <div class="deskripsi_container shadow">
+            <div class="tentangkami">
+              <h2>Perhatian!!!</h2>
+            </div>
+            <div class="deskripsi_paragraf">
+              <p>
+                Setelah anda selesai menambah kegiatan baru, periksalah pada bagian agenda untuk memastikan apakah
+                kegiatan yang baru anda buat telah berhasil tesimpan.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="maincontent shadow" id="maincontent">
-      <div class="tukar_container container">
-        <div class="desc_hero">
-          <div class="hero_title">
-            <h2>Ingin Melihat Kegiatan Sebelumnya?</h2>
-          </div>
-          <div class="hero_subtitle">
-            Anda ingin melihat kegiatan sebelumnya? Tenang! kami menyediakan informasi histori
-            kegiatan desa yang sudah berlalu. Yuk! segera cek riwayat kegiatan sebagai arsip
-            atau evaluasi untuk masa depan!
-            <a class="exchange_button" href="#/riwayat-agenda">
-              Cek Riwayat
-            </a>
-          </div>
-        </div>
-        <img class="image_hero image_hero_cek_kegiatan" src="./cek-riwayat.png" alt="Hero"/>
-      </div>
-    </div>
-    </div>
   `;
   },
 
