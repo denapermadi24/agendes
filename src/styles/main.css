@@ -682,6 +682,10 @@ footer {
   border-radius: 8px;
 }
 
+.team_card{
+  width: 220px;
+}
+
 /* Dashboard Admin */
 .container-post-kegiatan {
   max-width: 900px;
