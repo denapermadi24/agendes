@@ -686,6 +686,21 @@ footer {
   width: 220px;
 }
 
+.nama_team{
+  padding: 8px 5px;
+  text-align: center;
+  font-size: 10px;
+  color: #000000;
+  width: 100%;
+}
+
+.nama_univ{
+  text-align: center;
+  font-size: 10px;
+  color: #000000;
+  width: 100%;
+}
+
 /* Dashboard Admin */
 .container-post-kegiatan {
   max-width: 900px;
