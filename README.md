@@ -56,3 +56,19 @@
 </div> 
 
 </br>
+
+<h2 align="center"> Our Team </h2>
+
+#### 1. [Jalalludin](https://www.linkedin.com/in/jalal-ludin-a0a70b262/) | UNIVERSITAS BUMIGORA | `F350YA201`
+
+#### 2. [L. Ridho Taufikurahman](https://www.linkedin.com/in/lalu-ridho-taufikurahman-6001a8239/) | UNIVERSITAS BUMIGORA | `F350YA309`
+
+#### 3. [Muhammad Febrian Haekal](https://www.linkedin.com/in/mfebrian-haekal/) | UNIVERSITAS BUMIGORA | `F350YA237`
+
+#### 4. [Ni Putu Amelia Devasya Putri](https://www.linkedin.com) | ITB STIKOM BALI| `F113XA345`
+
+#### 5. [Dena Indiarto Permadi](https://www.linkedin.com/in/dena-indiarto-permadi-74436126a/) | UNIVERSITAS MATARAM | `S253YA454`
+ 
+
+
+</br>
