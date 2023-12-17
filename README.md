@@ -77,6 +77,7 @@
 <img align="left" alt="HTML" width="48px" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" style="padding-right:10px;" />
 <img align="left" alt="CSS" width="48px" height="48" src="https://img.icons8.com/plasticine/48/css3.png" style="padding-right:10px;" />
 <img align="left" alt="JAVASCRIPT" width="48px" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" style="padding-right:10px;" />
+<img align="left" alt="mysql" width="48px" height="55" src="https://img.icons8.com/?size=80&id=QeIg9siFKGgp&format=png" style="padding-right:10px; "/>
 <img align="left" alt="express" width="70px" height="48" src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.png" style="padding-right:10px;" />
 <img align="left" alt="VisualStudioCode" width="48px"  height="48" src="https://img.icons8.com/color/48/visual-studio-code-2019.png" style="padding-right:10px;" />
 <img align="left" alt="Postman" width="48px" height="48" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" style="padding-right:10px;" />
