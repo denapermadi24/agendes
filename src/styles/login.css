@@ -5,8 +5,9 @@ body {
 
 .box-form {
   margin: 50px auto;
+  margin-top: 50px;
   /* Add margin to create space between navbar and login form */
-  width: 80%;
+  width: 60%;
   background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
