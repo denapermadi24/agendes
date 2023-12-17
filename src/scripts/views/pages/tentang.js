@@ -48,7 +48,7 @@ const Tentang = {
       <div class="team_card">
         <div class="team_avatar">
           <div class="team_image">
-            <img class="icon_team" src="jalal.png" alt="Team Icon" />
+            <img class="icon_team" src="./jalal.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
             <a href="https://www.instagram.com/jaalalln/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -66,7 +66,7 @@ const Tentang = {
       <div class="team_card">
         <div class="team_avatar">
           <div class="team_image">
-            <img class="icon_team" src="ridho.png" alt="Team Icon" />
+            <img class="icon_team" src="./ridho.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
             <a href="https://www.instagram.com/t.laluridho/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -84,7 +84,7 @@ const Tentang = {
       <div class="team_card">
         <div class="team_avatar">
           <div class="team_image">
-            <img class="icon_team" src="ryan.png" alt="Team Icon" />
+            <img class="icon_team" src="./ryan.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
             <a href="https://www.instagram.com/febrianhaekal1/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -102,7 +102,7 @@ const Tentang = {
       <div class="team_card">
         <div class="team_avatar">
           <div class="team_image">
-            <img class="icon_team" src="amel.png" alt="Team Icon" />
+            <img class="icon_team" src="./amel.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
             <a href="https://www.instagram.com/ameldvsya/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -120,7 +120,7 @@ const Tentang = {
       <div class="team_card">
         <div class="team_avatar">
           <div class="team_image">
-            <img class="icon_team" src="dena.png" alt="Team Icon" />
+            <img class="icon_team" src="./dena.png" alt="Team Icon" />
           </div>
           <div class="icon_medsos-avtr">
             <a href="https://www.instagram.com/dnaprmdi/" class="medsos" target="_blank"><i class="fa fa-instagram"></i></a>
