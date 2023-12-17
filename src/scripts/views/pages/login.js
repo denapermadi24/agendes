@@ -7,7 +7,7 @@ const AdminLogin = {
         <div class="left">
           <div class="overlay">
             <h1>Welcome To</h1>
-            <img class="image_hero" src="./logo_white.png" alt="Hero" />
+            <img class="logo_login" src="./logo_white.png" alt="Hero" />
             <p>Makes it easier for you to schedule village activities!</p>
           </div>
         </div>
