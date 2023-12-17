@@ -84,7 +84,7 @@ const DashboardAdmin = {
         </div>
         <article class="container_reminder shadow">
           <section>
-            <h2>Reminder</h2>
+            <h2>Daftar Reminder Agenda</h2>
           </section>
           <article id="container_user-reminder">
           
