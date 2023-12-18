@@ -1,10 +1,10 @@
 import 'regenerator-runtime';
-import 'lazysizes';
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../styles/main.css';
 import '../styles/popup.css';
 import '../styles/login.css';
 import '../styles/responsive.css';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import App from './views/app';
 
 const mainContent = document.querySelector('#main-content');
