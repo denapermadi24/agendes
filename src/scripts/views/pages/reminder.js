@@ -1,4 +1,3 @@
-// Import statements here...
 import Swal from 'sweetalert2';
 import UrlParser from '../../routes/url-parser';
 import AgendaSource from '../../data/api-source';

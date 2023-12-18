@@ -1,9 +1,7 @@
-// ... (existing code)
-
 const AdminLogin = {
   async renderPageContent() {
     return `
-      <div class="box-form">
+      <div class="box-form shadow">
         <div class="left">
           <div class="overlay">
             <h1>Welcome To</h1>

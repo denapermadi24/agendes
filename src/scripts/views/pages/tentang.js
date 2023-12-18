@@ -1,5 +1,3 @@
-// import { createRestaurantItemTemplate } from '../templates/templates-creator';
-
 const Tentang = {
   async renderPageContent() {
     return `

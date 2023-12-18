@@ -6,7 +6,6 @@ import '../styles/popup.css';
 import '../styles/login.css';
 import '../styles/responsive.css';
 import App from './views/app';
-// import swRegister from './utils/sw-register';
 
 const mainContent = document.querySelector('#main-content');
 const skipLink = document.querySelector('.skip-link');

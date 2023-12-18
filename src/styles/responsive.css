@@ -413,4 +413,21 @@
     grid-template-columns: 1fr;
     padding: 20px 0;
   }
+
+  .box-form .left .overlay {
+    padding: 0 23px;
+  }
+
+  .box-form .left .overlay h1 {
+    font-size: 3.5em;
+  }
+
+  .logo_login {
+    width: 330px;
+  }
+
+  .box-form .left .overlay p {
+    text-align: center;
+    font-size: 1em;
+  }
 }
