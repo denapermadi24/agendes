@@ -83,14 +83,15 @@ async function saveReminder() {
 
     // Memeriksa inputan user dengan data API list Reminder apakah
     // sudah ada orang dengan nama, email dan id kegiatan yg sama
-    const cekPendaftaran = listReminder.find((item) => item.nama_user.toLowerCase()
-      === name.toLowerCase() && item.email_user.toLowerCase()
-      === email.toLowerCase() && item.id_kegiatan === parseInt(url.id, 10));
+    const cekPendaftaran = listReminder.find((item) => item.nama_user.toLowerCase().trim()
+      === name.toLowerCase().trim() && item.email_user.toLowerCase().trim()
+      === email.toLowerCase().trim() && item.id_kegiatan === parseInt(url.id, 10));
 
     // Memeriksa inputan user dengan data API list User Reminder apakah
-    // sudah ada orang dengan nama, email dan id kegiatan yg sama
-    const cekEmailPendaftar = dataUserEmail.find((user) => user.nama_user.toLowerCase()
-      === name.toLowerCase() && user.email_user.toLowerCase() === email.toLowerCase());
+    // sudah ada orang dengan nama dan email yg sama
+    const cekEmailPendaftar = dataUserEmail.find((user) => user.nama_user.toLowerCase().trim()
+      === name.toLowerCase().trim() && user.email_user.toLowerCase().trim()
+      === email.toLowerCase().trim());
 
     if (cekPendaftaran) {
       Swal.fire({
