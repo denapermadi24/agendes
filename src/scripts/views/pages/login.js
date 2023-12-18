@@ -34,8 +34,6 @@ const AdminLogin = {
 
     if (loginButton) {
       loginButton.addEventListener('click', login);
-    } else {
-      console.error('Login button not found.');
     }
 
     window.logout = logout;

@@ -32,7 +32,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name]-[contenthash].css',
+      filename: '[name].css',
     }),
     new ImageminWebpackPlugin({
       plugins: [
